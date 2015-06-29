@@ -1,0 +1,2 @@
+./screenshots/screenshot_*.png filter=lfs diff=lfs merge=lfs -text
+screenshots/screenshot_*.png filter=lfs diff=lfs merge=lfs -text
