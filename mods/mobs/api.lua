@@ -628,7 +628,6 @@ function mobs:register_mob(name, def)
 											if n.name ~= "air" and n.name ~= "default:obsidian" and n.name ~= "default:bedrock" and n.name ~= "protector:protect" then
 												activate_if_tnt(n.name, np, pos, 3)
 												minetest.env:remove_node(np)
-												nodeupdate(np)
 												if n.name ~= "tnt:tnt" and math.random() > 0.9 then
 													local drop = minetest.get_node_drops(n.name, "")
 													for _,item in ipairs(drop) do
