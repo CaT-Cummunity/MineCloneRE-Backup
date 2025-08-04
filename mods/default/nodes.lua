@@ -380,7 +380,6 @@ minetest.register_node("default:sapling", {
 minetest.register_node("default:leaves", {
 	description = "Leaves",
 	drawtype = "allfaces_optional",
-	visual_scale = 1.3,
 	tiles = {"default_leaves.png"},
 	paramtype = "light",
 	stack_max = 64,
@@ -432,7 +431,6 @@ minetest.register_node("default:junglewood", {
 minetest.register_node("default:jungleleaves", {
 	description = "Jungle Leaves",
 	drawtype = "allfaces_optional",
-	visual_scale = 1.3,
 	tiles = {"default_jungleleaves.png"},
 	paramtype = "light",
 	stack_max = 64,
@@ -498,7 +496,6 @@ minetest.register_node("default:acaciawood", {
 minetest.register_node("default:acacialeaves", {
 	description = "Acacia Leaves",
 	drawtype = "allfaces_optional",
-	visual_scale = 1.3,
 	tiles = {"default_acacialeaves.png"},
 	paramtype = "light",
 	stack_max = 64,
@@ -563,7 +560,6 @@ minetest.register_node("default:sprucewood", {
 minetest.register_node("default:spruceleaves", {
 	description = "Spruce Leaves",
 	drawtype = "allfaces_optional",
-	visual_scale = 1.3,
 	tiles = {"default_spruceleaves.png"},
 	paramtype = "light",
 	stack_max = 64,
