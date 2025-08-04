@@ -310,7 +310,6 @@ stairs.register_stair_and_slab("quartzblock", "default:quartz_block",
 stairs.register_slab("quartzstair", "default:quartz_pillar",
 	{snappy=1,bendy=2,cracky=1,level=2},
 	{"default_quartz_pillar_top.png", "default_quartz_pillar_top.png", "default_quartz_pillar_side.png"},
-	"Quartz Pillar stair",
 	"Quartz Pillar slab",
 	default.node_sound_stone_defaults()
 )	
