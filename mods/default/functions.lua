@@ -97,6 +97,14 @@ end
 
 -- ABMs
 
+function drop_attached_node(pos)
+    local node = minetest.get_node(pos)
+    if node then
+        minetest.remove_node(pos)
+        minetest.add_item(pos, node.name)
+    end
+end
+
 minetest.register_abm({
 	nodenames = {"group:dig_by_water"},
 	neighbors = {"group:water"},
