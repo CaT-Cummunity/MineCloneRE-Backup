@@ -88,6 +88,7 @@ minetest.register_entity(":__builtin:item", {
 		self.timer = self.timer + dtime
 		if time ~= 0 and (self.timer > time) then
 			self.object:remove()
+			return
 		end
 		
 		local p = self.object:getpos()
