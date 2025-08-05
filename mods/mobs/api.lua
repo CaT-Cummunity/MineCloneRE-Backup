@@ -206,7 +206,7 @@ function mobs:register_mob(name, def)
 		end,
 		
 		on_step = function(self, dtime)
-			
+
 			if self.lifetimer < 600 and self.lifetimer > 590 and self.state == "stand" then
 				self.set_velocity(self, self.walk_velocity)
 				self.state = "walk"
@@ -365,9 +365,9 @@ function mobs:register_mob(name, def)
 						local damage = d-5
 						self.object:set_hp(self.object:get_hp()-damage)
 						minetest.sound_play("monster_damage", {object = self.object, gain = 0.25})
-						if self.object:get_hp() == 0 then
+						if not self.object:is_valid() then
 							minetest.sound_play("monster_death", {object = self.object, gain = 0.4})
-							self.object:remove()
+							return
 						end
 					end
 					self.old_y = self.object:getpos().y
@@ -397,9 +397,9 @@ function mobs:register_mob(name, def)
 				then
 					self.object:set_hp(self.object:get_hp()-self.light_damage)
 					minetest.sound_play("zombie_sun_damage", {object = self.object, gain = 0.25})
-					if self.object:get_hp() <= 0 then
+					if not self.object:is_valid() then
 						minetest.sound_play("monster_death", {object = self.object, gain = 0.4})
-						self.object:remove()
+						return true
 					end
 				end
 				
@@ -408,9 +408,9 @@ function mobs:register_mob(name, def)
 				then
 					self.object:set_hp(self.object:get_hp()-self.water_damage)
 					minetest.sound_play("monster_damage", {object = self.object, gain = 0.25})
-					if self.object:get_hp() <= 0 then
+					if not self.object:is_valid() then
 						minetest.sound_play("monster_death", {object = self.object, gain = 0.4})
-						self.object:remove()
+						return true
 					end
 				end
 				
@@ -419,9 +419,9 @@ function mobs:register_mob(name, def)
 				then
 					self.object:set_hp(self.object:get_hp()-self.lava_damage)
 					minetest.sound_play("monster_damage", {object = self.object, gain = 0.25})
-					if self.object:get_hp() <= 0 then
+					if not self.object:is_valid() then
 						minetest.sound_play("monster_death", {object = self.object, gain = 0.4})
-						self.object:remove()
+						return true
 					end
 				end
 				self.give_hit(self)
@@ -430,9 +430,13 @@ function mobs:register_mob(name, def)
 			self.env_damage_timer = self.env_damage_timer + dtime
 			if self.state == "attack" and self.env_damage_timer > 1 then
 				self.env_damage_timer = 0
-				do_env_damage(self)
+				if do_env_damage(self) then
+					return
+				end
 			elseif self.state ~= "attack" then
-				do_env_damage(self)
+				if do_env_damage(self) then
+					return
+				end
 			end
 
 			if self.follow ~= "" and not self.following then
