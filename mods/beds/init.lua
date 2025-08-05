@@ -100,7 +100,11 @@ minetest.register_node("beds:bed_bottom", {
 			minetest.chat_send_all("You can only sleep at night")
 			return
 		else			
-			clicker:set_physics_override(0,0,0)
+			clicker:set_physics_override({
+				speed = 0,
+				jump = 0,
+				gravity = 0
+			})
 			old_yaw = clicker:get_look_yaw()
 			guy = clicker
 			clicker:set_look_yaw(get_dir(pos))
@@ -194,7 +198,11 @@ minetest.register_globalstep(function(dtime)
 				minetest.after(2, function()
 					minetest.env:set_timeofday(0.23)
 					wait = false
-					guy:set_physics_override(1,1,1)
+					guy:set_physics_override({
+						speed = 1,
+						jump = 1,
+						gravity = 1
+					})
 					guy:setpos(exit(guy:getpos()))
 					
 				end)

@@ -8,7 +8,11 @@ minetest.register_globalstep(function(dtime)
 				if player:get_player_control().up == false then
 					minetest.after(0.05, function()
 						if player:get_player_control().up == true then
-							player:set_physics_override(1.5, 1, 1)
+							player:set_physics_override({
+								speed = 1.5,
+								jump = 1,
+								gravity = 1
+							})
 							player_running_physics[player:get_player_name()] = true
 							--print("test1")
 						end
@@ -19,7 +23,11 @@ minetest.register_globalstep(function(dtime)
 			--minetest.after(0.2, function()
 				if player:get_player_control().up == false then
 					player_running_physics[player:get_player_name()] = nil
-					player:set_physics_override(1, 1, 1)
+					player:set_physics_override({
+						speed = 1,
+						jump = 1,
+						gravity = 1
+					})
 					--print("test2")
 				end
 			--end)
