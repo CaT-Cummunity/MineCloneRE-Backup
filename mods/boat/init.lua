@@ -168,9 +168,8 @@ minetest.register_craftitem("boat:boat", {
 minetest.register_craft({
 	output = "boat:boat",
 	recipe = {
-		{"", "", ""},
-		{"", "", ""},
-		{"default:wood", "", ""},
+		{"default:wood", "", "default:wood"},
+		{"default:wood", "default:wood", "default:wood"},
 	},
 })
 
