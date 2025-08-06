@@ -888,6 +888,7 @@ minetest.register_abm({
 			end
 			-- Remove node
 			minetest.remove_node(p0)
+			core.check_for_falling(p)
 		end
 	end
 })
