@@ -856,8 +856,8 @@ minetest.register_node("default:vine", {
 		while next_find == true do 
 			local pos2 = {x=pos.x, y=pos.y-ptr, z=pos.z}
 			local node = minetest.env:get_node(pos2)
-			if node.name == "default:vine" and check_attached_node(pos2, node) == false then
-				drop_attached_node(pos2)
+			if node.name == "default:vine" and compatibility.check_attached_node(pos2, node) == false then
+				compatibility.drop_attached_node(pos2)
 				nodeupdate(pos2)
 				ptr = ptr + 1
 			else

@@ -97,14 +97,6 @@ end
 
 -- ABMs
 
-function drop_attached_node(pos)
-    local node = minetest.get_node(pos)
-    if node then
-        minetest.remove_node(pos)
-        minetest.add_item(pos, node.name)
-    end
-end
-
 minetest.register_abm({
 	nodenames = {"group:dig_by_water"},
 	neighbors = {"group:water"},
@@ -117,7 +109,7 @@ minetest.register_abm({
 				local n = minetest.get_node(p)
 				-- On verifie si il y a de l'eau
 				if (n.name=="default:water_flowing") then
-						drop_attached_node(pos)
+						compatibility.drop_attached_node(pos)
 						minetest.dig_node(pos)
 						break
 				end
@@ -129,7 +121,7 @@ minetest.register_abm({
 			local n = minetest.get_node(p)
 			-- On verifie si il y a de l'eau
 			if (n.name=="default:water_flowing") then
-				drop_attached_node(pos)
+				compatibility.drop_attached_node(pos)
 				minetest.dig_node(pos)
 				break
 			end
