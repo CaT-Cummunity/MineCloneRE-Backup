@@ -139,20 +139,33 @@ if HUD_SHOW_ARMOR then dofile(minetest.get_modpath("hud").."/armor.lua") end
 
 
 local function update_hud(player)
+	local current_hud = nil
  --air
-	local air = player:get_breath()*2
-	if player:get_breath() > 10 then air = 0 end
-	player:hud_change(air_hud[player:get_player_name()], "number", air)
+ 	current_hud = air_hud[player:get_player_name()]
+	if current_hud then
+		local air = player:get_breath()*2
+		if player:get_breath() > 10 then air = 0 end
+		player:hud_change(current_hud, "number", air)
+	end
  --health
-	player:hud_change(health_hud[player:get_player_name()], "number", player:get_hp())
+ 	current_hud = health_hud[player:get_player_name()]
+	if current_hud then
+		player:hud_change(current_hud, "number", player:get_hp())
+	end
  --armor
-	local arm = tonumber(hud.armor[player:get_player_name()])
-	if not arm then arm = 0 end
-	player:hud_change(armor_hud[player:get_player_name()], "number", arm)
+ 	current_hud = armor_hud[player:get_player_name()]
+	if current_hud then
+		local arm = tonumber(hud.armor[player:get_player_name()])
+		if not arm then arm = 0 end
+		player:hud_change(current_hud, "number", arm)
+	end
  --hunger
-	local h = tonumber(hud.hunger[player:get_player_name()])
-	if h>20 then h=20 end
-	player:hud_change(hunger_hud[player:get_player_name()], "number", h)
+ 	current_hud = hunger_hud[player:get_player_name()]
+	if current_hud then
+		local h = tonumber(hud.hunger[player:get_player_name()])
+		if h>20 then h=20 end
+		player:hud_change(current_hud, "number", h)
+	end
 end
 
 local function timer(interval, player)
@@ -168,7 +181,7 @@ minetest.register_on_joinplayer(function(player)
 	if not hud.hunger[player:get_player_name()] then
 		hud.hunger[player:get_player_name()] = 20
 	end
-	minetest.after(0.5, function()
+	minetest.after(0.5, function() --TODO: can we try to do it without delay?
 		hide_builtin(player)
 		costum_hud(player)
 		if HUD_ENABLE_HUNGER then hud.save_hunger(player) end
