@@ -44,6 +44,7 @@ minetest.register_node("tnt:tnt", {
 		action_on = (function(p, node)
 			minetest.env:remove_node(p)
 			spawn_tnt(p, "tnt:tnt")
+			core.check_for_falling(p)
 		end),
 	}}
 })
@@ -52,6 +53,7 @@ minetest.register_on_punchnode(function(p, node)
 	if node.name == "tnt:tnt" then
 		minetest.env:remove_node(p)
 		spawn_tnt(p, "tnt:tnt")
+		core.check_for_falling(p)
 	end
 end)
 
@@ -121,6 +123,7 @@ function TNT:on_step(dtime)
 						if n.name ~= "air" and n.name ~= "default:obsidian" and n.name ~= "default:bedrock" and n.name ~= "protector:protect" then
 							activate_if_tnt(n.name, np, pos, 3)
 							minetest.env:remove_node(np)
+							core.check_for_falling(np)
 							if n.name ~= "tnt:tnt" and math.random() > 0.9 then
 								local drop = minetest.get_node_drops(n.name, "")
 									for _,item in ipairs(drop) do
