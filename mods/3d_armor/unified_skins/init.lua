@@ -14,7 +14,7 @@ uniskins.update_player_visuals = function(self, player)
 	local name = player:get_player_name()
 	player:set_properties({
 		visual = "mesh",
-		mesh = "uniskins_character.x",
+		mesh = "uniskins_character.glb",
 		textures = {
 			self.skin[name],
 			self.armor[name],
