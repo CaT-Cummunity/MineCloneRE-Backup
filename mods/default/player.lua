@@ -51,8 +51,7 @@ model_def = {
 ]]
 
 -- Player animation blending
--- Note: This is currently broken due to a bug in Irrlicht, leave at 0
-local animation_blend = 0
+local animation_blend = 0.5
 
 default.registered_player_models = { }
 

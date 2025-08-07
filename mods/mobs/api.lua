@@ -143,7 +143,7 @@ function mobs:register_mob(name, def)
 				then
 					self.object:set_animation(
 						{x = self.animation.stand_start,y = self.animation.stand_end},
-						self.animation.speed_normal, 0
+						self.animation.speed_normal, self.animation.blend or 0.5
 					)
 					self.animation.current = "die"
 				end
@@ -155,7 +155,7 @@ function mobs:register_mob(name, def)
 				then
 					self.object:set_animation(
 						{x = self.animation.stand_start,y = self.animation.stand_end},
-						self.animation.speed_normal, 0
+						self.animation.speed_normal, self.animation.blend or 0.5
 					)
 					self.animation.current = "stand"
 				end
@@ -167,7 +167,7 @@ function mobs:register_mob(name, def)
 				then
 					self.object:set_animation(
 						{x = self.animation.walk_start,y = self.animation.walk_end},
-						self.animation.speed_normal, 0
+						self.animation.speed_normal, self.animation.blend or 0.5
 					)
 					self.animation.current = "walk"
 				end
@@ -180,12 +180,12 @@ function mobs:register_mob(name, def)
 					if self.animation.run_start ~= nil then
 						self.object:set_animation(
 							{x = self.animation.run_start,y = self.animation.run_end},
-							self.animation.speed_run, 0
+							self.animation.speed_run, self.animation.blend or 0.5
 						)
 					else
 						self.object:set_animation(
 						{x = self.animation.walk_start,y = self.animation.walk_end},
-						self.animation.speed_run, 0
+						self.animation.speed_run, self.animation.blend or 0.5
 						)
 					end
 					self.animation.current = "run"
@@ -198,7 +198,7 @@ function mobs:register_mob(name, def)
 				then
 					self.object:set_animation(
 						{x = self.animation.punch_start,y = self.animation.punch_end},
-						self.animation.speed_normal, 0
+						self.animation.speed_normal, self.animation.blend or 0.5
 					)
 					self.animation.current = "punch"
 				end
