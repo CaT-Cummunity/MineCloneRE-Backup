@@ -368,7 +368,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 				end
 				if minetest.env:get_node({x=x,y=1,z=z}).name == "default:sand" then
 					if math.random(0,1000) == 1 then -- 0,12000
-						random_struct.call_struct(p,2)
+						random_struct.call_struct({x=x,y=1,z=z},2)
 					end
 				end
 
