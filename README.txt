@@ -26,7 +26,7 @@ License of source code
 ----------------------
 
 Mineclone source :
-LGPL v2.1 (Dave Devil's)
+LGPL v2.1 (Dave Devil's) see licence.txt
 
 Mods Credit :
 See README.txt in each mod directory for information about other authors.
@@ -57,4 +57,3 @@ Copyright (C) 2014 DaveDevil's CC BY-SA 3.0
 Where contact Dave Devils ?
 ----------------------------
 You can contact at twitter https://twitter.com/dev_dave33
-You can follow too for see what i work for the next update !
