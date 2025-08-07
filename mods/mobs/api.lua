@@ -231,6 +231,7 @@ function mobs:register_mob(name, def)
 			
 			if self.type == "monster" and minetest.setting_getbool("only_peaceful") then
 				self.object:remove()
+				return
 			end
 			
 			self.affolated_timer = self.affolated_timer - dtime
@@ -647,8 +648,9 @@ function mobs:register_mob(name, def)
 										end
 									end
 								end
-								self.object:remove()
 							end
+							self.object:remove()
+							return
 						end
 				end
 			elseif self.state == "attack" and self.attack_type == "dogfight" then
@@ -780,6 +782,7 @@ function mobs:register_mob(name, def)
 			
 			if self.type == "monster" and minetest.setting_getbool("only_peaceful") then
 				self.object:remove()
+				return
 			end
 			
 			if staticdata then
@@ -796,6 +799,7 @@ function mobs:register_mob(name, def)
 				local hp = self.object:get_hp()
 				minetest.log("action", "A mob with " .. tostring(hp) .. " HP despawned at " .. minetest.pos_to_string(pos) .. " on activation.")
 				self.object:remove()
+				return
 			end
 		end,
 		
