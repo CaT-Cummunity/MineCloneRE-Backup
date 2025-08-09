@@ -98,6 +98,14 @@ function bucket.register_liquid(source, flowing, itemname, inventory_image, name
 						return
 					end
 				end
+
+				-- don't empty bucket if it was used by player in creative mode
+				if user and user:is_player() then
+					if playerdata[user:get_player_name()]['gamemode'] == "Creative" then
+						return nil
+					end
+				end
+
 				return {name="bucket:bucket_empty"}
 			end
 		})
