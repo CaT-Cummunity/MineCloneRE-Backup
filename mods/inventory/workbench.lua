@@ -7,10 +7,6 @@ minetest.register_node("inventory:crafting_table", {
 	groups = {choppy=2,oddly_breakable_by_hand=1,flammable=2},
 	sounds = default.node_sound_wood_defaults(),
 	on_rightclick = function(pos, node, clicker, itemstack)
-		clicker:get_inventory():set_width("craft", 3)
-		clicker:get_inventory():set_size("craft", 9)
-		clicker:get_inventory():set_width("main", 9)
-		clicker:get_inventory():set_size("main", 36)
 		minetest.show_formspec(clicker:get_player_name(), "inventory:craftin_table", CRAFTING_FORMSPEC)
 	end,
 })

@@ -17,8 +17,6 @@ CREATIVE_FORMSPEC = "invsize[11,9.75;]"..
 	"list[detached:creative_trash;main;9.1,7.75;1,1;]"..
 	"button[9.15,6;1,1;clear_inventory;Clear]"..
 	"button[9.5,8.75;1.5,1.5;creative_survival;Survival]"
-	player:get_inventory():set_width("main", 9)
-	player:get_inventory():set_size("main", 36)
 	player:set_inventory_formspec(CREATIVE_FORMSPEC)
 end
 
@@ -36,10 +34,6 @@ local name = player:get_player_name()
 		"list[current_player;craft;4,1;2,1;]"..
 		"list[current_player;craft;4,2;2,1;3]"..
 		"list[current_player;craftpreview;7,1.5;1,1;]"
-		player:get_inventory():set_width("craft", 3)
-		player:get_inventory():set_size("craft", 9)
-		player:get_inventory():set_width("main", 9)
-		player:get_inventory():set_size("main", 36)
 	player:set_inventory_formspec(SURVIVAL_FORMSPEC)
 end
 

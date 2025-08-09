@@ -51,6 +51,12 @@ local function save_newplayer(pname)
 end
 
 minetest.register_on_joinplayer(function(player)
+	local player_inventory = player:get_inventory()
+
+	player_inventory:set_size("craft", 9)
+	player_inventory:set_width("craft", 3)
+	player_inventory:set_size("main", 36)
+
 	local pname = player:get_player_name()
 	local playerdata = load_player_data()
 	if not playerdata[pname] then
