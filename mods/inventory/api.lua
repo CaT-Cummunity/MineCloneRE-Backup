@@ -33,10 +33,11 @@ local name = player:get_player_name()
 		"image[1.6,0.25;2,4;player.png]"..
 		"list[current_player;main;0,4.5;9,4;9]"..
 		"list[current_player;main;0,8.25;9,1;]"..
-		"list[current_player;craft;4,1;2,2;]"..
+		"list[current_player;craft;4,1;2,1;]"..
+		"list[current_player;craft;4,2;2,1;3]"..
 		"list[current_player;craftpreview;7,1.5;1,1;]"
-		player:get_inventory():set_width("craft", 2)
-		player:get_inventory():set_size("craft", 4)
+		player:get_inventory():set_width("craft", 3)
+		player:get_inventory():set_size("craft", 9)
 		player:get_inventory():set_width("main", 9)
 		player:get_inventory():set_size("main", 36)
 	player:set_inventory_formspec(SURVIVAL_FORMSPEC)
