@@ -952,7 +952,7 @@ minetest.register_node("default:water_source", {
 	freezemelt = "default:ice",
 	post_effect_color = {a=64, r=100, g=100, b=200},
 	stack_max = 64,
-	groups = {water=3, liquid=3, puts_out_fire=1, freezes=1},
+	groups = {not_in_creative_inventory=1, water=3, liquid=3, puts_out_fire=1, freezes=1},
 })
 
 minetest.register_node("default:lava_flowing", {
@@ -1024,7 +1024,7 @@ minetest.register_node("default:lava_source", {
 	damage_per_second = 4*2,
 	post_effect_color = {a=192, r=255, g=64, b=0},
 	stack_max = 64,
-	groups = {lava=3, liquid=2, hot=3, igniter=1},
+	groups = {not_in_creative_inventory=1, lava=3, liquid=2, hot=3, igniter=1},
 })
 
 
