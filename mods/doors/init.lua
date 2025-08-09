@@ -632,8 +632,8 @@ minetest.register_node("doors:iron_trapdoor_open", {
 minetest.register_craft({
 	output = 'doors:iron_trapdoor 2',
 	recipe = {
-		{'group:iron', 'group:iron', ''},
-		{'group:iron', 'group:iron', ''},
+		{'default:steel_ingot', 'default:steel_ingot', ''},
+		{'default:steel_ingot', 'default:steel_ingot', ''},
 	}
 })
 
