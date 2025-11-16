@@ -5,16 +5,11 @@
 **chest
 **furnace bg
 **grass
-**lava
 **papyrus
-**sea lantern
 **sign
 **sulphur
 **tallgrass
 **torch
-**water
-**door wood a r
-**door wood b r
 **player
 **treeprop
 **wieldhand
