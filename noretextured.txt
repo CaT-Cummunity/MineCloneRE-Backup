@@ -18,4 +18,8 @@
 **player
 **treeprop
 **wieldhand
+*doors
+*dye
+*farming
+**tige
 
