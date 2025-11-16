@@ -5,6 +5,8 @@
 **chest
 **furnace bg
 **grass
+**junglegrass
+**large chest bg
 **papyrus
 **sign
 **sulphur
