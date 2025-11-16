@@ -41,11 +41,11 @@ Bob Lennon because it's a pyro-barbare
 License of media (textures and sounds)
 --------------------------------------
 
-Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+Textures for MineCloneRE getted from Mineclonia!
+All other files, unless mentioned otherwise, fall under:
+Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 http://creativecommons.org/licenses/by-sa/3.0/
 
-Texture Pack :
-Copyright (C) 2013 Vattic
 See README.txt in each mod directory for information about other authors.
 
 http://www.minecraftforum.net/topic/72747-/
