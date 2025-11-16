@@ -27,4 +27,9 @@
 *inventory
 **backgrounds
 *mobs
+*player_textures
+*redstone
+**mesecons textures
+***torch
+
 
