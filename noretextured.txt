@@ -22,4 +22,7 @@
 *dye
 *farming
 **tige
+*flowers
+**pot
+**watherlily angles
 
