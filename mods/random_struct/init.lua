@@ -228,6 +228,8 @@ random_struct.call_struct= function(pos, struct_style)
 			  random_struct.generatecity(pos)
 			elseif struct_style == 2 then
 			  random_struct.generate_temple_sand(pos)
+			elseif struct_style == 3 then
+			  random_struct.generate_witcher_house(pos)
 			end
 end
 
@@ -251,6 +253,16 @@ random_struct.generate_temple_sand = function(pos)
 	random_struct.deserialise_WE(newpos, temple)
 end
 
+random_struct.generate_witcher_house = function(pos)
+	-- Witcher house!
+	local house = random_struct.get_struct("witcher_house.we")
+	local newpos = {x=pos.x,y=pos.y,z=pos.z}
+	if newpos == nil then
+		return
+	end
+	random_struct.deserialise_WE(newpos, house)
+end
+
 
 -- Debug command
 minetest.register_chatcommand("spawnstruct", {
@@ -263,7 +275,7 @@ minetest.register_chatcommand("spawnstruct", {
 		end
 		if param == "" or param == "help" then
 			minetest.chat_send_player(name, "Please use instruction /spawnstruct TYPE")
-			minetest.chat_send_player(name, "TYPE avaiable : town, temple_sand")
+			minetest.chat_send_player(name, "TYPE avaiable : town, temple_sand, witcher_house")
 		end
 		if param == "town" then
 			random_struct.generatecity(pos)
@@ -272,6 +284,10 @@ minetest.register_chatcommand("spawnstruct", {
 		if param == "temple_sand" then
 			random_struct.generate_temple_sand(pos)
 			minetest.chat_send_player(name, "Temple Sand Created")
+		end
+		if param == "witcher_house" then
+			random_struct.generate_witcher_house(pos)
+			minetest.chat_send_player(name, "Witcher House Created")
 		end
 	end
 })
