@@ -14,3 +14,6 @@ the Free Software Foundation; either version 2 of the License, or
 http://www.gnu.org/licenses/lgpl-2.1.html
 
 
+Textures license: see "License of media (textures and sounds)" in README.txt of MineCloneRE
+
+

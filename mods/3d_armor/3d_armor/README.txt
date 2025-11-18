@@ -13,3 +13,5 @@ default settings: [minetest.conf]
 # Set number of seconds between armor updates.
 3d_armor_update_time = 1
 
+Textures license: see "License of media (textures and sounds)" in README.txt of MineCloneRE
+

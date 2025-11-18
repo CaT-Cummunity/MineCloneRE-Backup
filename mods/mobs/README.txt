@@ -23,6 +23,7 @@ License:
 Sourcecode: WTFPL (see below)
 Grahpics: WTFPL (see below)
 Models: WTFPL (by Pavel_S, see below)
+mobs_mc_creeper.b3d GPLv3 (by 22i)
 
 See also:
 http://minetest.net/
