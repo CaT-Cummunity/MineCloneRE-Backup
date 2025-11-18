@@ -5,7 +5,6 @@
 **furnace bg
 **large chest bg
 **sign
-**sulphur
 **torch
 **player
 **treeprop
