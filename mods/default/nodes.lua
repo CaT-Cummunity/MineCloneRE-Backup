@@ -137,7 +137,11 @@ minetest.register_node("default:stonebrickmossy", {
 
 minetest.register_node("default:dirt_with_grass", {
 	description = "Dirt with Grass",
-	tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
+	paramtype2 = "color",
+	tiles = {"default_grass_block_top.png", { name="default_dirt.png", color="white" }, { name="default_dirt.png^default_dirt_grass_shadow.png", color="white" }},
+	overlay_tiles = {"", "", {name="default_grass_block_side_overlay.png", tileable_vertical=false}},
+	palette_index = 0,
+	color = "#55C93FFF",
 	is_ground_content = true,
 	stack_max = 64,
 	groups = {crumbly=3, soil=1},
@@ -149,7 +153,7 @@ minetest.register_node("default:dirt_with_grass", {
 
 minetest.register_node("default:dirt_with_grass_footsteps", {
 	description = "Dirt with Grass and Footsteps",
-	tiles = {"default_grass_footsteps.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
+	tiles = {"default_grass_path_top.png", "default_dirt.png", "default_grass_path_side.png"},
 	is_ground_content = true,
 	stack_max = 64,
 	groups = {crumbly=3, not_in_creative_inventory=1, soil=1},
@@ -606,26 +610,7 @@ minetest.register_alias("sapling", "default:sapling")
 minetest.register_alias("junglesapling", "default:junglesapling")
 minetest.register_alias("acaciasapling", "default:acaciasapling")
 minetest.register_alias("sprucesapling", "default:sprucesapling")
-
-minetest.register_node("default:junglegrass", {
-	description = "Jungle Grass",
-	drawtype = "plantlike",
-	visual_scale = 1.3,
-	tiles = {"default_junglegrass.png"},
-	inventory_image = "default_junglegrass.png",
-	wield_image = "default_junglegrass.png",
-	paramtype = "light",
-	walkable = false,
-	buildable_to = true,
-	is_ground_content = true,
-	stack_max = 64,
-	groups = {snappy=3,flammable=2,attached_node=1,dig_by_water=1},
-	sounds = default.node_sound_leaves_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
-	},
-})
+minetest.register_alias("default:junglegrass", "default:grass")
 
 minetest.register_node("default:cactus", {
 	description = "Cactus",
@@ -660,6 +645,9 @@ minetest.register_node("default:reeds", {
 	description = "Sugarcane",
 	drawtype = "plantlike",
 	tiles = {"default_papyrus.png"},
+	paramtype2 = "color",
+	palette = "default_palette_grass.png",
+	palette_index = 0,
 	inventory_image = "default_sugar_cane.png",
 	wield_image = "default_sugar_cane.png",
 	paramtype = "light",
@@ -1652,9 +1640,16 @@ minetest.register_node("default:dry_shrub", {
 minetest.register_node("default:grass", {
 	description = "Grass",
 	drawtype = "plantlike",
+	paramtype = "color",
 	tiles = {"default_tallgrass.png"},
-	inventory_image = "default_tallgrass.png",
-	wield_image = "default_tallgrass.png",
+	palette = "default_palette_grass.png",
+	color = "#55C93FFF",
+	inventory_image = "default_tallgrass_inv.png",
+	wield_image = "default_tallgrass_inv.png",
+	selection_box = {
+		type = "fixed",
+		fixed = {{ -6/16, -8/16, -6/16, 6/16, 4/16, 6/16 }},
+	},
 	drop = {
 		max_items = 1,
 		items = {
