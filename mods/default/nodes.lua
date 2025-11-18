@@ -610,26 +610,7 @@ minetest.register_alias("sapling", "default:sapling")
 minetest.register_alias("junglesapling", "default:junglesapling")
 minetest.register_alias("acaciasapling", "default:acaciasapling")
 minetest.register_alias("sprucesapling", "default:sprucesapling")
-
-minetest.register_node("default:junglegrass", {
-	description = "Jungle Grass",
-	drawtype = "plantlike",
-	visual_scale = 1.3,
-	tiles = {"default_junglegrass.png"},
-	inventory_image = "default_junglegrass.png",
-	wield_image = "default_junglegrass.png",
-	paramtype = "light",
-	walkable = false,
-	buildable_to = true,
-	is_ground_content = true,
-	stack_max = 64,
-	groups = {snappy=3,flammable=2,attached_node=1,dig_by_water=1},
-	sounds = default.node_sound_leaves_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
-	},
-})
+minetest.register_alias("default:junglegrass", "default:grass")
 
 minetest.register_node("default:cactus", {
 	description = "Cactus",
