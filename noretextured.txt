@@ -4,9 +4,7 @@
 **all leaves
 **chest
 **furnace bg
-**junglegrass
 **large chest bg
-**papyrus
 **sign
 **sulphur
 **torch
