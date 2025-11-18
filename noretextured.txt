@@ -1,7 +1,6 @@
 *beds
 *boat
 *default
-**all leaves
 **chest
 **furnace bg
 **large chest bg
