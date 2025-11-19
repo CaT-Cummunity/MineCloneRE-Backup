@@ -9,27 +9,28 @@ local wool = {}
 -- colors, and then some recipes using more specific colors for a few non-base
 -- colors available. When crafting, the last recipes will be checked first.
 wool.dyes = {
-	{"white",      "White",      nil},
-	{"grey",       "Grey",       "basecolor_grey"},
-	{"black",      "Black",      "basecolor_black"},
-	{"red",        "Red",        "basecolor_red"},
-	{"yellow",     "Yellow",     "basecolor_yellow"},
-	{"green",      "Green",      "basecolor_green"},
-	{"cyan",       "Cyan",       "basecolor_cyan"},
-	{"blue",       "Blue",       "basecolor_blue"},
-	{"magenta",    "Magenta",    "basecolor_magenta"},
-	{"orange",     "Orange",     "excolor_orange"},
-	{"violet",     "Violet",     "excolor_violet"},
-	{"brown",      "Brown",      "unicolor_dark_orange"},
-	{"pink",       "Pink",       "unicolor_light_red"},
-	{"dark_grey",  "Dark Grey",  "unicolor_darkgrey"},
-	{"dark_green", "Dark Green", "unicolor_dark_green"},
+	{"white",      		 "White",      nil,						"white"},
+	{"light_gray",       "Light Gray", "basecolor_gray",		"ligh_gray"},
+	{"black",      		 "Black",      "basecolor_black",		"black"},
+	{"red",        		 "Red",        "basecolor_red",			"red"},
+	{"yellow",     		 "Yellow",     "basecolor_yellow",		"yellow"},
+	{"lime",      		 "Lime",      "basecolor_green",		"lime"},
+	{"cyan",       		 "Cyan",       "basecolor_cyan",		"cyan"},
+	{"blue",       		 "Blue",       "basecolor_blue",		"blue"},
+	{"magenta",    		 "Magenta",    "basecolor_magenta",		"magenta"},
+	{"orange",     		 "Orange",     "excolor_orange",		"orange"},
+	{"purple",     		 "Purple",     "excolor_violet",		"purple"},
+	{"brown",      		 "Brown",      "unicolor_dark_orange",	"brown"},
+	{"pink",       		 "Pink",       "unicolor_light_red",	"pink"},
+	{"dark_gray",  		 "Dark Gray",  "unicolor_darkgray",		"gray"},
+	{"dark_green", 		 "Dark Green", "unicolor_dark_green",	"green"},
 }
 
 for _, row in ipairs(wool.dyes) do
 	local name = row[1]
 	local desc = row[2]
 	local craft_color_group = row[3]
+	local dye = row[4]
 	-- Node Definition
 		minetest.register_node("wool:"..name, {
 			description = desc.." Wool",
@@ -60,7 +61,7 @@ for _, row in ipairs(wool.dyes) do
 		minetest.register_craft({
 			type = "shapeless",
 			output = 'wool:'..name,
-			recipe = {'group:dye,'..craft_color_group, 'group:wool'},
+			recipe = {'dye:'..dye, 'group:wool'},
 		})
 		minetest.register_craft({
 			type = "shapeless",
