@@ -375,6 +375,15 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = 'default:prismarine_dark',
+	recipe = {
+		{'default:prismarine_shard', 'default:prismarine_shard', 'default:prismarine_shard'},
+		{'default:prismarine_shard', 'default:ink_sac', 'default:prismarine_shard'},
+		{'default:prismarine_shard', 'default:prismarine_shard', 'default:prismarine_shard'},
+	}
+})
+
+minetest.register_craft({
 	output = 'default:steelblock',
 	recipe = {
 		{'default:steel_ingot', 'default:steel_ingot', 'default:steel_ingot'},
@@ -494,7 +503,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = 'dye:white 3',
+	output = 'default:bone_meal 3',
 	recipe = {
 		{'default:bone'},
 	}
@@ -503,14 +512,14 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'default:lapisblock',
 	recipe = {
-		{'dye:blue', 'dye:blue', 'dye:blue'},
-		{'dye:blue', 'dye:blue', 'dye:blue'},
-		{'dye:blue', 'dye:blue', 'dye:blue'},
+		{'default:lapis_lazuli', 'default:lapis_lazuli', 'default:lapis_lazuli'},
+		{'default:lapis_lazuli', 'default:lapis_lazuli', 'default:lapis_lazuli'},
+		{'default:lapis_lazuli', 'default:lapis_lazuli', 'default:lapis_lazuli'},
 	}
 })
 
 minetest.register_craft({
-	output = 'dye:blue 9',
+	output = 'default:lapis_lazuli 9',
 	recipe = {
 		{'default:lapisblock'},
 	}

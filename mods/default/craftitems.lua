@@ -145,3 +145,21 @@ minetest.register_craftitem("default:quartz_crystal", {
 	inventory_image = "default_quartz_crystal.png",
 	stack_max = 64,
 })
+
+minetest.register_craftitem("default:lapis_lazuli", {
+	description = "Lapis Lazuli",
+	inventory_image = "default_lapis.png",
+	stack_max = 64,
+})
+
+minetest.register_craftitem("default:bone_meal", {
+	description = "Bone Meal",
+	inventory_image = "default_bone_meal.png",
+	stack_max = 64,
+})
+
+minetest.register_craftitem("default:ink_sac", {
+	description = "Ink Sac",
+	inventory_image = "default_ink_sac.png",
+	stack_max = 64,
+})

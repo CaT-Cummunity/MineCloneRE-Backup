@@ -62,67 +62,192 @@ dye.excolors = {"white", "lightgrey", "grey", "darkgrey", "black", "red", "orang
 local dyelocal = {}
 
 -- This collection of colors is partly a historic thing, partly something else.
-dyelocal.dyes = {
-	{"white",      "Bone Meal",     {dye=1, basecolor_white=1,   excolor_white=1,     unicolor_white=1}},
-	{"grey",       "Light Grey Dye",      {dye=1, basecolor_grey=1,    excolor_grey=1,      unicolor_grey=1}},
-	{"dark_grey",  "Grey Dye", {dye=1, basecolor_grey=1,    excolor_darkgrey=1,  unicolor_darkgrey=1}},
-	{"black",      "Ink Sac",     {dye=1, basecolor_black=1,   excolor_black=1,     unicolor_black=1}},
-	{"violet",     "Violet Dye",    {dye=1, basecolor_magenta=1, excolor_violet=1,    unicolor_violet=1}},
-	{"blue",       "Lapis Lazuli",      {dye=1, basecolor_blue=1,    excolor_blue=1,      unicolor_blue=1}},
-	{"lightblue",  "Light Blue Dye",      {dye=1, basecolor_blue=1,    excolor_lightblue=1,   unicolor_lightblue=1}},
-	{"cyan",       "Cyan Dye",      {dye=1, basecolor_cyan=1,    excolor_cyan=1,      unicolor_cyan=1}},
-	{"dark_green", "Cactus Green",{dye=1, basecolor_green=1,   excolor_green=1,     unicolor_dark_green=1}},
-	{"green",      "Lime Dye",     {dye=1, basecolor_green=1,   excolor_green=1,     unicolor_green=1}},
-	{"yellow",     "Dandelion Yellow",    {dye=1, basecolor_yellow=1,  excolor_yellow=1,    unicolor_yellow=1}},
-	{"brown",      "Cocoa Beans",     {dye=1, basecolor_yellow=1,  excolor_orange=1,    unicolor_dark_orange=1}},
-	{"orange",     "Orange Dye",    {dye=1, basecolor_orange=1,  excolor_orange=1,    unicolor_orange=1}},
-	{"red",        "Rose Red",       {dye=1, basecolor_red=1,     excolor_red=1,       unicolor_red=1}},
-	{"magenta",    "Magenta Dye",   {dye=1, basecolor_magenta=1, excolor_red_violet=1,unicolor_red_violet=1}},
-	{"pink",       "Pink Dye",      {dye=1, basecolor_red=1,     excolor_red=1,       unicolor_light_red=1}},
+dye.colors = {
+	["white"] = {
+		readable_name = "White",
+		groups = {basecolor_white=1,   excolor_white=1,     unicolor_white=1},
+		rgb = "#d0d6d7",
+		unicolor = "white",
+		mc = "white",
+		palette_index = 0
+	},
+	["silver"] = {
+		readable_name = "Light Grey",
+		groups = {basecolor_grey=1,    excolor_grey=1,      unicolor_grey=1},
+		rgb = "#818177",
+		unicolor = "grey",
+		mc = "grey",
+		palette_index = 1
+	},
+	["grey"] = {
+		readable_name = "Grey",
+		groups = {basecolor_grey=1,    excolor_darkgrey=1,  unicolor_darkgrey=1},
+		rgb = "#383c40",
+		unicolor = "darkgrey",
+		mc = "dark_grey",
+		palette_index = 2
+	},
+	["black"] = {
+		readable_name = "Black",
+		groups = {basecolor_black=1,   excolor_black=1,     unicolor_black=1},
+		rgb = "#080a10",
+		unicolor = "black",
+		mc = "black",
+		palette_index = 3
+	},
+	["purple"] = {
+		readable_name = "Purple",
+		groups = {basecolor_magenta=1, excolor_violet=1,    unicolor_violet=1},
+		rgb = "#6821a0",
+		unicolor = "violet",
+		mc = "violet",
+		palette_index = 4
+	},
+	["blue"] = {
+		readable_name = "Blue",
+		groups = {basecolor_blue=1,    excolor_blue=1,      unicolor_blue=1},
+		rgb = "#2e3094",
+		unicolor = "blue",
+		mc = "blue",
+		palette_index = 5
+	},
+	["light_blue"] = {
+		readable_name = "Light Blue",
+		groups = {basecolor_blue=1,    excolor_blue=1,      unicolor_light_blue=1},
+		rgb = "#258ec9",
+		unicolor = "light_blue",
+		mc = "lightblue",
+		palette_index = 6
+	},
+	["cyan"] = {
+		readable_name = "Cyan",
+		groups = {basecolor_cyan=1,    excolor_cyan=1,      unicolor_cyan=1},
+		rgb = "#167b8c",
+		unicolor = "cyan",
+		mc = "cyan",
+		palette_index = 7
+	},
+	["green"] = {
+		readable_name = "Green",
+		groups = {basecolor_green=1,   excolor_green=1,     unicolor_dark_green=1},
+		rgb = "#4b5e25",
+		unicolor = "dark_green",
+		mc = "dark_green",
+		palette_index = 8
+	},
+	["lime"] = {
+		readable_name = "Lime",
+		groups = {basecolor_green=1,   excolor_green=1,     unicolor_green=1},
+		rgb = "#60ac19",
+		unicolor = "green",
+		mc = "green",
+		palette_index = 9
+	},
+	["yellow"] = {
+		readable_name = "Yellow",
+		groups = {basecolor_yellow=1,  excolor_yellow=1,    unicolor_yellow=1},
+		rgb = "#f1b216",
+		unicolor = "yellow",
+		mc = "yellow",
+		palette_index = 10
+	},
+	["brown"] = {
+		readable_name = "Brown",
+		groups = {basecolor_brown=1,   excolor_orange=1,    unicolor_dark_orange=1},
+		rgb = "#633d20",
+		unicolor = "dark_orange",
+		mc = "brown",
+		palette_index = 11
+	},
+	["orange"] = {
+		readable_name = "Orange",
+		groups = {basecolor_orange=1,  excolor_orange=1,    unicolor_orange=1},
+		rgb = "#e26501",
+		unicolor = "orange",
+		mc = "orange",
+		palette_index = 12
+	},
+	["red"] = {
+		readable_name = "Red",
+		groups = {basecolor_red=1,     excolor_red=1,       unicolor_red=1},
+		rgb = "#912222",
+		unicolor = "red",
+		mc = "red",
+		palette_index = 13
+	},
+	["magenta"] = {
+		readable_name = "Magenta",
+		groups = {basecolor_magenta=1, excolor_red_violet=1,unicolor_red_violet=1},
+		rgb = "#ab31a2",
+		unicolor = "red_violet",
+		mc = "magenta",
+		palette_index = 14
+	},
+	["pink"] = {
+		readable_name = "Pink",
+		groups = {basecolor_red=1,     excolor_red=1,       unicolor_light_red=1},
+		rgb = "#d56791",
+		unicolor = "light_red",
+		mc = "pink",
+		palette_index = 15
+	},
 }
 
--- Define items
-for _, row in ipairs(dyelocal.dyes) do
-	local name = row[1]
-	local description = row[2]
-	local groups = row[3]
-	local item_name = "dye:"..name
-	local item_image = "dye_"..name..".png"
-	minetest.register_craftitem(item_name, {
-		inventory_image = item_image,
-		description = description,
-		groups = groups,
-		stack_max = 64,
-	})
-	minetest.register_craft({
-		type = "shapeless",
-		output = item_name.." 4",
-		recipe = {"group:flower,color_"..name},
+-- Takes an unicolor group name (e.g. “unicolor_white”) and returns a
+-- corresponding dye name (if it exists), nil otherwise.
+function dye.unicolor_to_dye(unicolor_group)
+	for k,v in pairs(dye.colors) do
+		if v.groups[unicolor_group] == 1 then return "dye:"..k end
+	end
+end
+
+function dye.mc_to_color(mccolor)
+	for k,v in pairs(dye.colors) do
+		if mccolor == v.mcre then return k end
+	end
+end
+
+---Returns the definition of a color based on it's palette_index.
+---@param index number?
+---@return string?
+---@return table?
+function dye.palette_index_to_color(index)
+	for k, v in pairs(dye.colors) do
+		if v.palette_index == index then return k, v end
+	end
+end
+
+for k, v in pairs(dye.colors) do
+	core.register_craftitem("dye:" .. k, {
+		_color = k,
+		description = (v.readable_name .. " Dye"),
+		groups = {craftitem = 1, dye = 1}, v.groups,
+		inventory_image = "dye.png^(dye_mask.png^[colorize:"..v.rgb..")",
 	})
 end
 
 -- Mix recipes
 -- Just mix everything to everything somehow sanely
 
-dyelocal.mixbases = {"magenta", "red", "orange", "brown", "yellow", "green", "dark_green", "cyan", "blue", "violet", "black", "dark_grey", "grey", "white", "lightblue"}
+dyelocal.mixbases = {"magenta", "red", "orange", "brown", "yellow", "green", "dark_green", "cyan", "blue", "violet", "black", "dark_grey", "grey", "white", "light_blue"}
 
 dyelocal.mixes = {
-	--       magenta,  red,    orange,   brown,    yellow,  green,  dark_green, cyan,    blue,   violet,   black,  dark_grey,  grey,   white,        lightblue
-lightblue ={ "violet",  "violet", "orange", "orange", "green", "green", "green",  "blue",  "blue", "violet",  "black",  "grey",   "grey", "lightblue", "lightblue" },
-	white = {"pink",  "pink", "orange", "orange", "yellow", "green", "green",  "grey",  "lightblue", "violet",  "grey",  "grey",   "white", "white" },
-	grey  = {"pink",  "pink", "orange", "orange", "yellow", "green", "green",  "grey",  "cyan",  "pink",  "dark_grey","grey", "grey"},
-	dark_grey={"brown","brown", "brown", "brown", "brown","dark_green","dark_green","blue","blue","violet","black", "black"},
-	black = {"black", "black", "black",  "black", "black",  "black", "black",  "black", "black", "black",  "black"},
-	violet= {"magenta","magenta","red",  "brown", "red",    "cyan",  "brown",  "blue",  "violet","violet"},
-	blue  = {"violet", "magenta","brown","brown","dark_green","cyan","cyan",   "cyan",  "blue"},
-	cyan  = {"blue","brown","dark_green","dark_grey","green","cyan","dark_green","cyan"},
-	dark_green={"brown","brown","brown", "brown", "green",  "green", "dark_green"},
-	green = {"brown", "yellow","yellow","dark_green","green","green"},
-	yellow= {"red",  "orange", "yellow","orange", "yellow"},
-	brown = {"brown", "brown","orange", "brown"},
-	orange= {"red",  "orange","orange"},
-	red   = {"magenta","red"},
-	magenta={"magenta"},
+	--       	 magenta,   red,         orange,   		brown,    		yellow,   		green,  		dark_green, 	cyan,     	blue,       	violet,   	black,       	dark_grey, 		grey,       white,      	light_blue
+	light_blue ={"violet",  "violet",    "orange", 		"orange", 		"green",  		"green", 		"green",  		"blue",    	"blue",     	"violet",  	"black",    	"grey",    		"grey",		"light_blue", 	"light_blue" },
+	white = {    "pink",    "pink",      "orange", 		"orange", 		"yellow", 		"green", 		"green",  		"grey",  	"light_blue", 	"violet",  	"grey",      	"grey",    		"white",  	"white" },
+	grey  = {	 "pink",    "pink",      "orange", 		"orange", 		"yellow", 		"green", 		"green",  		"grey",     "cyan",     	"pink",  	"dark_grey", 	"grey",    		"grey"},
+	dark_grey={	 "brown",   "brown",     "brown", 		"brown", 		"brown",		"dark_green",	"dark_green",	"blue",		"blue",			"violet",	"black",		"black"},
+	black = {	 "black",   "black",     "black",  		"black", 		"black",  		"black", 		"black",  		"black", 	"black", 		"black",  	"black"},
+	violet= {	 "magenta", "magenta",   "red",  		"brown", 		"red",    		"cyan",  		"brown",  		"blue",  	"violet",		"violet"},
+	blue  = {	 "violet",  "magenta",   "brown",		"brown",		"dark_green",	"cyan",			"cyan",   		"cyan",  	"blue"},
+	cyan  = {	 "blue",    "brown",     "dark_green",	"dark_grey",	"green",		"cyan",			"dark_green",	"cyan"},
+	dark_green={ "brown",   "brown",     "brown", 		"brown", 		"green",  		"green", 		"dark_green"},
+	green = {	 "brown",   "yellow",    "yellow",		"dark_green",	"green",		"green"},
+	yellow= {	 "red",     "orange", 	 "yellow",		"orange", 		"yellow"},
+	brown = {	 "brown",   "brown",	 "orange", 		"brown"},
+	orange= {	 "red",     "orange",	 "orange"},
+	red   = {	 "magenta", "red"},
+	magenta={	 "magenta"},
 }
 
 for one,results in pairs(dyelocal.mixes) do
@@ -139,6 +264,7 @@ end
 -- Hide dyelocal
 dyelocal = nil
 
+--[[
 minetest.register_craftitem("dye:white", {
 	inventory_image = "dye_white.png",
 	description = "Bone Meal",
@@ -148,10 +274,103 @@ minetest.register_craftitem("dye:white", {
 		duengen(pointed_thing)
 	end,
 })
+]]
+
+-- Crafts
+minetest.register_craft({
+	output = 'dye:white',
+	recipe = {
+		{'default:bone_meal'},
+	}
+})
 
 minetest.register_craft({
-	output = 'dye:lightblue',
+	output = 'dye:white',
+	recipe = {
+		{'flowers:tulip_white'},
+	}
+})
+
+minetest.register_craft({
+	output = 'dye:silver',
+	recipe = {
+		{'flowers:oxeye_daisy'},
+	}
+})
+
+minetest.register_craft({
+	output = 'dye:black',
+	recipe = {
+		{'default:ink_sac'},
+	}
+})
+
+minetest.register_craft({
+	output = 'dye:blue',
+	recipe = {
+		{'default:lapis_lazuli'},
+	}
+})
+
+minetest.register_craft({
+	output = 'dye:light_blue',
 	recipe = {
 		{'flowers:blue_orchid'},
+	}
+})
+
+minetest.register_craft({
+	output = 'dye:red',
+	recipe = {
+		{'flowers:rose'},
+	}
+})
+
+minetest.register_craft({
+	output = 'dye:red',
+	recipe = {
+		{'flowers:tulip_red'},
+	}
+})
+
+minetest.register_craft({
+	output = 'dye:magenta',
+	recipe = {
+		{'flowers:allium'},
+	}
+})
+
+minetest.register_craft({
+	output = 'dye:pink',
+	recipe = {
+		{'flowers:houstonia'},
+	}
+})
+
+minetest.register_craft({
+	output = 'dye:pink',
+	recipe = {
+		{'flowers:tulip_pink'},
+	}
+})
+
+minetest.register_craft({
+	output = 'dye:pink',
+	recipe = {
+		{'flowers:houstonia'},
+	}
+})
+
+minetest.register_craft({
+	output = 'dye:yellow',
+	recipe = {
+		{'flowers:dandelion_yellow'},
+	}
+})
+
+minetest.register_craft({
+	output = 'dye:orange',
+	recipe = {
+		{'flowers:tulip_orange'},
 	}
 })
