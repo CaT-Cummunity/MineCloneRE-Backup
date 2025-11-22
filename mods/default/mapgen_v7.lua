@@ -20,7 +20,7 @@ minetest.register_alias("mapgen_lava_source", "default:lava_source")
 minetest.register_alias("mapgen_cobble", "default:cobble")
 minetest.register_alias("mapgen_mossycobble", "default:mossycobble")
 minetest.register_alias("mapgen_dirt_with_grass", "default:dirt_with_grass")
-minetest.register_alias("mapgen_junglegrass", "default:junglegrass")
+minetest.register_alias("mapgen_junglegrass", "default:tallgrass")
 minetest.register_alias("mapgen_stone_with_coal", "default:stone_with_coal")
 minetest.register_alias("mapgen_stone_with_iron", "default:stone_with_iron")
 minetest.register_alias("mapgen_desert_sand", "default:sand")
@@ -238,6 +238,7 @@ minetest.register_ore({
 	height_max     = -0,
 })
 
+--[[
 function default.generate_ore(name, wherein, minp, maxp, seed, chunks_per_volume, chunk_size, ore_per_chunk, height_min, height_max)
 	minetest.log('action', "WARNING: default.generate_ore is deprecated")
 
@@ -279,6 +280,7 @@ function default.generate_ore(name, wherein, minp, maxp, seed, chunks_per_volume
 	end
 	--print("generate_ore done")
 end
+]]
 
 function default.make_reeds(pos, size)
 	for y=0,size-1 do
@@ -466,6 +468,46 @@ minetest.register_on_generated(function(minp, maxp, seed)
 end)
 ]]
 
+--
+-- Register Decorations
+--
+
+minetest.register_alias("mcl_trees:tree_oak", "default:tree")
+minetest.register_alias("mcl_trees:leaves_oak", "default:leaves")
+minetest.register_alias("mcl_trees:tree_spruce", "default:sprucetree")
+minetest.register_alias("mcl_trees:leaves_spruce", "default:spruceleaves")
+minetest.register_alias("mcl_core:snow", "default:snow")
+
+minetest.register_decoration({
+    name = "trees:tree",
+    deco_type = "schematic",
+    place_on = "default:dirt_with_grass",
+    sidelen = 10,
+    fill_ratio = 0.02,
+    biomes = "forest",
+	y_min = 3,
+    y_max = 1000,
+    schematic = "./models/tree.mts",
+    rotation = "random",
+})
+
+minetest.register_decoration({
+    name = "trees:spruce_tree",
+    deco_type = "schematic",
+    place_on = "default:dirt_with_snow",
+    sidelen = 10,
+    fill_ratio = 0.02,
+    biomes = "snowy_taiga",
+	y_min = 3,
+    y_max = 1000,
+    schematic = "./models/spruce_tree.mts",
+    rotation = "random",
+})
+
+--
+-- Register Biomes
+--
+
 minetest.register_biome({
     name = "desert",
     node_top = "default:desert_sand",
@@ -485,10 +527,37 @@ minetest.register_biome({
     depth_top = 1,
     node_filler = "default:dirt",
     depth_filler = 3,
-	    y_max = 31000,
+	y_max = 31000,
     y_min = 2,
     heat_point = 45,
     humidity_point = 70,
+})
+
+minetest.register_biome({
+    name = "plane",
+    node_top = "default:dirt_with_grass",
+    depth_top = 1,
+    node_filler = "default:dirt",
+    depth_filler = 3,
+	y_max = 51,
+    y_min = 2,
+    heat_point = 50,
+    humidity_point = 60,
+})
+
+minetest.register_biome({
+    name = "snowy_taiga",
+    node_top = "default:dirt_with_snow",
+    depth_top = 1,
+    node_filler = "default:dirt",
+    depth_filler = 3,
+	node_water_top = "default:ice",
+    depth_water_top = 1,
+    node_water = "default:water_source",
+	y_max = 31000,
+    y_min = 2,
+    heat_point = 10,
+    humidity_point = 55,
 })
 
 minetest.register_biome({
@@ -502,6 +571,10 @@ minetest.register_biome({
     heat_point = 45,
     humidity_point = 99,
 })
+
+--
+-- 1st Bedrock Layer
+--
 
 local function replace(old, new, min, max)
 	minetest.register_ore({
@@ -528,6 +601,10 @@ replace("default:lava_source", "default:bedrock", -90, -80)
 replace("default:lava_flowing", "default:bedrock", -90, -80)
 replace("default:water_source", "default:bedrock", -90, -80)
 replace("default:water_flowing", "default:bedrock", -90, -80)
+
+--
+-- 2nd Bedrock Layer
+--
 
 local function bedrock(old)
 	minetest.register_ore({

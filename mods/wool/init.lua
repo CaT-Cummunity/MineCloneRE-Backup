@@ -14,7 +14,7 @@ wool.dyes = {
 	{"black",      		 "Black",      "basecolor_black",		"black"},
 	{"red",        		 "Red",        "basecolor_red",			"red"},
 	{"yellow",     		 "Yellow",     "basecolor_yellow",		"yellow"},
-	{"lime",      		 "Lime",      "basecolor_green",		"lime"},
+	{"lime",      		 "Lime",       "basecolor_green",		"lime"},
 	{"cyan",       		 "Cyan",       "basecolor_cyan",		"cyan"},
 	{"blue",       		 "Blue",       "basecolor_blue",		"blue"},
 	{"magenta",    		 "Magenta",    "basecolor_magenta",		"magenta"},

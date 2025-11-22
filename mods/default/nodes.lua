@@ -66,11 +66,11 @@ minetest.register_node("default:stone_with_lapis", {
 	drop = {
 		max_items = 2,
 		items = {
-			{items = {'dye:blue 5'},rarity = 16},
-			{items = {'dye:blue 4'},rarity = 12},
-			{items = {'dye:blue 3'},rarity = 8},
-			{items = {'dye:blue 2'},rarity = 6},
-			{items = {'dye:blue 1'},rarity = 1},
+			{items = {'default:lapis_lazuli 5'},rarity = 16},
+			{items = {'default:lapis_lazuli 4'},rarity = 12},
+			{items = {'default:lapis_lazuli 3'},rarity = 8},
+			{items = {'default:lapis_lazuli 2'},rarity = 6},
+			{items = {'default:lapis_lazuli 1'},rarity = 1},
 		}
 	},
 	sounds = default.node_sound_stone_defaults(),
