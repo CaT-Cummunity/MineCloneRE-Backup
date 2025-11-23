@@ -472,6 +472,8 @@ end)
 -- Register Decorations
 --
 
+-- Schematics *.mts were taken from Mineclonia with WorldEdit commands
+
 minetest.register_alias("mcl_trees:tree_oak", "default:tree")
 minetest.register_alias("mcl_trees:leaves_oak", "default:leaves")
 minetest.register_alias("mcl_trees:tree_spruce", "default:sprucetree")
@@ -484,9 +486,11 @@ minetest.register_alias("mcl_trees:leaves_birch", "default:birchleaves")
 minetest.register_alias("mcl_trees:tree_jungle", "default:jungletree")
 minetest.register_alias("mcl_trees:leaves_jungle", "default:jungleleaves")
 minetest.register_alias("mcl_core:vine", "default:vine")
+minetest.register_alias("mcl_core:cactus", "default:cactus")
+minetest.register_alias("mcl_core:deadbush", "default:dry_shrub")
 
 minetest.register_decoration({
-    name = "trees:tree",
+    name = "mcre_decorations:tree",
     deco_type = "schematic",
     place_on = "default:dirt_with_forest_grass",
     sidelen = 10,
@@ -500,7 +504,7 @@ minetest.register_decoration({
 })
 
 minetest.register_decoration({
-    name = "trees:birch_tree",
+    name = "mcre_decorations:birch_tree",
     deco_type = "schematic",
     place_on = "default:dirt_with_birch_forest_grass",
     sidelen = 10,
@@ -514,7 +518,7 @@ minetest.register_decoration({
 })
 
 minetest.register_decoration({
-    name = "trees:acacia_tree",
+    name = "mcre_decorations:acacia_tree",
     deco_type = "schematic",
     place_on = "default:dirt_with_savanna_grass",
     sidelen = 10,
@@ -528,7 +532,7 @@ minetest.register_decoration({
 })
 
 minetest.register_decoration({
-    name = "trees:jungle_tree",
+    name = "mcre_decorations:jungle_tree",
     deco_type = "schematic",
     place_on = "default:dirt_with_jungle_grass",
     sidelen = 10,
@@ -542,7 +546,7 @@ minetest.register_decoration({
 })
 
 minetest.register_decoration({
-    name = "trees:nosnow_spruce_tree",
+    name = "mcre_decorations:nosnow_spruce_tree",
     deco_type = "schematic",
     place_on = "default:dirt_with_taiga_grass",
     sidelen = 10,
@@ -556,7 +560,7 @@ minetest.register_decoration({
 })
 
 minetest.register_decoration({
-    name = "trees:spruce_tree",
+    name = "mcre_decorations:spruce_tree",
     deco_type = "schematic",
     place_on = "default:dirt_with_snow",
     sidelen = 10,
@@ -569,12 +573,26 @@ minetest.register_decoration({
     rotation = "random",
 })
 
+minetest.register_decoration({
+    name = "mcre_decorations:cactus",
+    deco_type = "schematic",
+    place_on = "default:sand",
+    sidelen = 10,
+    fill_ratio = 0.001,
+    biomes = "desert",
+	y_min = 3,
+    y_max = 1000,
+	flags = "place_center_x, place_center_z",
+    schematic = "schematics/cactus.mts",
+    rotation = "random",
+})
+
 --
 -- Register Biomes
 --
 
 minetest.register_biome({
-    name = "desert",
+    name = "mcre_biomes:desert",
     node_top = "default:desert_sand",
     depth_top = 3,
 	node_stone = "default:desert_stone",
@@ -587,7 +605,7 @@ minetest.register_biome({
 })
 
 minetest.register_biome({
-    name = "forest",
+    name = "mcre_biomes:forest",
     node_top = "default:dirt_with_forest_grass",
     depth_top = 1,
     node_filler = "default:dirt",
@@ -599,7 +617,7 @@ minetest.register_biome({
 })
 
 minetest.register_biome({
-    name = "birch_forest",
+    name = "mcre_biomes:birch_forest",
     node_top = "default:dirt_with_birch_forest_grass",
     depth_top = 1,
     node_filler = "default:dirt",
@@ -611,7 +629,7 @@ minetest.register_biome({
 })
 
 minetest.register_biome({
-    name = "plane",
+    name = "mcre_biomes:plane",
     node_top = "default:dirt_with_grass",
     depth_top = 1,
     node_filler = "default:dirt",
@@ -623,7 +641,7 @@ minetest.register_biome({
 })
 
 minetest.register_biome({
-    name = "savanna",
+    name = "mcre_biomes:savanna",
     node_top = "default:dirt_with_savanna_grass",
     depth_top = 1,
     node_filler = "default:dirt",
@@ -635,7 +653,7 @@ minetest.register_biome({
 })
 
 minetest.register_biome({
-    name = "jungle",
+    name = "mcre_biomes:jungle",
     node_top = "default:dirt_with_jungle_grass",
     depth_top = 1,
     node_filler = "default:dirt",
@@ -647,7 +665,7 @@ minetest.register_biome({
 })
 
 minetest.register_biome({
-    name = "taiga",
+    name = "mcre_biomes:taiga",
     node_top = "default:dirt_with_taiga_grass",
     depth_top = 1,
     node_filler = "default:dirt",
@@ -659,7 +677,7 @@ minetest.register_biome({
 })
 
 minetest.register_biome({
-    name = "snowy_taiga",
+    name = "mcre_biomes:snowy_taiga",
 	node_dust = "default:snow",
     node_top = "default:dirt_with_snow",
     depth_top = 1,
@@ -672,7 +690,7 @@ minetest.register_biome({
 })
 
 minetest.register_biome({
-    name = "beach",
+    name = "mcre_biomes:beach",
     node_top = "default:desert_sand",
     depth_top = 1,
     node_filler = "default:desert_sand",
