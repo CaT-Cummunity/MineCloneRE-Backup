@@ -135,13 +135,113 @@ minetest.register_node("default:stonebrickmossy", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
+--
+-- Grass Variations
+--
+
 minetest.register_node("default:dirt_with_grass", {
 	description = "Dirt with Grass",
 	paramtype2 = "color",
 	tiles = {"default_grass_block_top.png", { name="default_dirt.png", color="white" }, { name="default_dirt.png^default_dirt_grass_shadow.png", color="white" }},
 	overlay_tiles = {"", "", {name="default_grass_block_side_overlay.png", tileable_vertical=false}},
 	palette_index = 0,
-	color = "#55C93FFF",
+	color = "#91bd59",
+	is_ground_content = true,
+	stack_max = 64,
+	groups = {crumbly=3, soil=1},
+	drop = 'default:dirt',
+	sounds = default.node_sound_dirt_defaults({
+		footstep = {name="default_grass_footstep", gain=0.4},
+	}),
+})
+
+minetest.register_node("default:dirt_with_savanna_grass", {
+	description = "Dirt with Savanna Grass",
+	paramtype2 = "color",
+	tiles = {"default_grass_block_top.png", { name="default_dirt.png", color="white" }, { name="default_dirt.png^default_dirt_grass_shadow.png", color="white" }},
+	overlay_tiles = {"", "", {name="default_grass_block_side_overlay.png", tileable_vertical=false}},
+	palette_index = 0,
+	color = "#bfb755",
+	is_ground_content = true,
+	stack_max = 64,
+	groups = {crumbly=3, soil=1},
+	drop = 'default:dirt',
+	sounds = default.node_sound_dirt_defaults({
+		footstep = {name="default_grass_footstep", gain=0.4},
+	}),
+})
+
+minetest.register_node("default:dirt_with_taiga_grass", {
+	description = "Dirt with Taiga Grass",
+	paramtype2 = "color",
+	tiles = {"default_grass_block_top.png", { name="default_dirt.png", color="white" }, { name="default_dirt.png^default_dirt_grass_shadow.png", color="white" }},
+	overlay_tiles = {"", "", {name="default_grass_block_side_overlay.png", tileable_vertical=false}},
+	palette_index = 0,
+	color = "#86b783",
+	is_ground_content = true,
+	stack_max = 64,
+	groups = {crumbly=3, soil=1},
+	drop = 'default:dirt',
+	sounds = default.node_sound_dirt_defaults({
+		footstep = {name="default_grass_footstep", gain=0.4},
+	}),
+})
+
+minetest.register_node("default:dirt_with_jungle_grass", {
+	description = "Dirt with Jungle Grass",
+	paramtype2 = "color",
+	tiles = {"default_grass_block_top.png", { name="default_dirt.png", color="white" }, { name="default_dirt.png^default_dirt_grass_shadow.png", color="white" }},
+	overlay_tiles = {"", "", {name="default_grass_block_side_overlay.png", tileable_vertical=false}},
+	palette_index = 0,
+	color = "#59c93c",
+	is_ground_content = true,
+	stack_max = 64,
+	groups = {crumbly=3, soil=1},
+	drop = 'default:dirt',
+	sounds = default.node_sound_dirt_defaults({
+		footstep = {name="default_grass_footstep", gain=0.4},
+	}),
+})
+
+minetest.register_node("default:dirt_with_forest_grass", {
+	description = "Dirt with Forest Grass",
+	paramtype2 = "color",
+	tiles = {"default_grass_block_top.png", { name="default_dirt.png", color="white" }, { name="default_dirt.png^default_dirt_grass_shadow.png", color="white" }},
+	overlay_tiles = {"", "", {name="default_grass_block_side_overlay.png", tileable_vertical=false}},
+	palette_index = 0,
+	color = "#79c05a",
+	is_ground_content = true,
+	stack_max = 64,
+	groups = {crumbly=3, soil=1},
+	drop = 'default:dirt',
+	sounds = default.node_sound_dirt_defaults({
+		footstep = {name="default_grass_footstep", gain=0.4},
+	}),
+})
+
+minetest.register_node("default:dirt_with_birch_forest_grass", {
+	description = "Dirt with Birch Forest Grass",
+	paramtype2 = "color",
+	tiles = {"default_grass_block_top.png", { name="default_dirt.png", color="white" }, { name="default_dirt.png^default_dirt_grass_shadow.png", color="white" }},
+	overlay_tiles = {"", "", {name="default_grass_block_side_overlay.png", tileable_vertical=false}},
+	palette_index = 0,
+	color = "#88bb67",
+	is_ground_content = true,
+	stack_max = 64,
+	groups = {crumbly=3, soil=1},
+	drop = 'default:dirt',
+	sounds = default.node_sound_dirt_defaults({
+		footstep = {name="default_grass_footstep", gain=0.4},
+	}),
+})
+
+minetest.register_node("default:dirt_with_swamp_grass", {
+	description = "Dirt with Swamp Grass",
+	paramtype2 = "color",
+	tiles = {"default_grass_block_top.png", { name="default_dirt.png", color="white" }, { name="default_dirt.png^default_dirt_grass_shadow.png", color="white" }},
+	overlay_tiles = {"", "", {name="default_grass_block_side_overlay.png", tileable_vertical=false}},
+	palette_index = 0,
+	color = "#6a7039",
 	is_ground_content = true,
 	stack_max = 64,
 	groups = {crumbly=3, soil=1},
@@ -166,6 +266,18 @@ minetest.register_node("default:dirt_with_grass_footsteps", {
 minetest.register_node("default:dirt_with_snow", {
 	description = "Dirt with Snow",
 	tiles = {"default_snow.png", "default_dirt.png", "default_dirt.png^default_snow_side.png"},
+	is_ground_content = true,
+	stack_max = 64,
+	groups = {crumbly=3},
+	drop = 'default:dirt',
+	sounds = default.node_sound_dirt_defaults({
+		footstep = {name="default_grass_footstep", gain=0.4},
+	}),
+})
+
+minetest.register_node("default:dirt_podzol", {
+	description = "Podzol",
+	tiles = {"default_dirt_podzol.png", "default_dirt.png", "default_dirt.png^default_dirt_podzol_side.png"},
 	is_ground_content = true,
 	stack_max = 64,
 	groups = {crumbly=3},
@@ -401,6 +513,63 @@ minetest.register_node("default:leaves", {
 				-- player will get apple with 1/20 chance
 				items = {'default:apple'},
 				rarity = 200,
+			},
+			{
+				-- player will get leaves only if he get no saplings,
+				-- this is because max_items is 1
+				items = {''},
+			}
+		}
+	},
+	sounds = default.node_sound_leaves_defaults(),
+})
+
+-- Birch Tree --
+
+minetest.register_node("default:birchtree", {
+	description = "Birch Tree",
+	tiles = {"default_birchtree_top.png", "default_birchtree_top.png", "default_birchtree.png"},
+	paramtype2 = "facedir",
+	is_ground_content = false,
+	on_place = minetest.rotate_node,
+	stack_max = 64,
+	groups = {tree=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_node("default:birchsapling", {
+	description = "Birch Sapling",
+	drawtype = "plantlike",
+	visual_scale = 1.0,
+	tiles = {"default_birchsapling.png"},
+	inventory_image = "default_birchsapling.png",
+	wield_image = "default_birchsapling.png",
+	paramtype = "light",
+	walkable = false,
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+	},
+	stack_max = 64,
+	groups = {snappy=2,dig_immediate=3,flammable=2,attached_node=1,dig_by_water=1},
+	sounds = default.node_sound_defaults(),
+})
+
+minetest.register_node("default:birchleaves", {
+	description = "Birch Leaves",
+	drawtype = "allfaces_optional",
+	tiles = {"default_birchleaves.png"},
+	color = "#68a55f",
+	paramtype = "light",
+	stack_max = 64,
+	groups = {snappy=3, leafdecay=3, flammable=2, leaves=1},
+	drop = {
+		max_items = 1,
+		items = {
+			{
+				-- player will get sapling with 1/20 chance
+				items = {'default:birchsapling'},
+				rarity = 20,
 			},
 			{
 				-- player will get leaves only if he get no saplings,

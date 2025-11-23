@@ -477,17 +477,81 @@ minetest.register_alias("mcl_trees:leaves_oak", "default:leaves")
 minetest.register_alias("mcl_trees:tree_spruce", "default:sprucetree")
 minetest.register_alias("mcl_trees:leaves_spruce", "default:spruceleaves")
 minetest.register_alias("mcl_core:snow", "default:snow")
+minetest.register_alias("mcl_trees:tree_acacia", "default:acaciatree")
+minetest.register_alias("mcl_trees:leaves_acacia", "default:acacialeaves")
+minetest.register_alias("mcl_trees:tree_birch", "default:birchtree")
+minetest.register_alias("mcl_trees:leaves_birch", "default:birchleaves")
+minetest.register_alias("mcl_trees:tree_jungle", "default:jungletree")
+minetest.register_alias("mcl_trees:leaves_jungle", "default:jungleleaves")
+minetest.register_alias("mcl_core:vine", "default:vine")
 
 minetest.register_decoration({
     name = "trees:tree",
     deco_type = "schematic",
-    place_on = "default:dirt_with_grass",
+    place_on = "default:dirt_with_forest_grass",
     sidelen = 10,
     fill_ratio = 0.02,
     biomes = "forest",
 	y_min = 3,
     y_max = 1000,
-    schematic = "./models/tree.mts",
+	flags = "place_center_x, place_center_z",
+    schematic = "models/tree.mts",
+    rotation = "random",
+})
+
+minetest.register_decoration({
+    name = "trees:birch_tree",
+    deco_type = "schematic",
+    place_on = "default:dirt_with_birch_forest_grass",
+    sidelen = 10,
+    fill_ratio = 0.02,
+    biomes = "birch_forest",
+	y_min = 3,
+    y_max = 1000,
+	flags = "place_center_x, place_center_z",
+    schematic = "models/birch_tree.mts",
+    rotation = "random",
+})
+
+minetest.register_decoration({
+    name = "trees:acacia_tree",
+    deco_type = "schematic",
+    place_on = "default:dirt_with_savanna_grass",
+    sidelen = 10,
+    fill_ratio = 0.001,
+    biomes = "savanna",
+	y_min = 3,
+    y_max = 1000,
+	flags = "place_center_x, place_center_z",
+    schematic = "models/acacia_tree.mts",
+    rotation = "random",
+})
+
+minetest.register_decoration({
+    name = "trees:jungle_tree",
+    deco_type = "schematic",
+    place_on = "default:dirt_with_jungle_grass",
+    sidelen = 10,
+    fill_ratio = 0.09,
+    biomes = "jungle",
+	y_min = 3,
+    y_max = 1000,
+	flags = "place_center_x, place_center_z",
+    schematic = "models/jungle_tree.mts",
+    rotation = "random",
+})
+
+minetest.register_decoration({
+    name = "trees:nosnow_spruce_tree",
+    deco_type = "schematic",
+    place_on = "default:dirt_with_taiga_grass",
+    sidelen = 10,
+    fill_ratio = 0.02,
+    biomes = "taiga",
+	y_min = 3,
+    y_max = 1000,
+	flags = "place_center_x, place_center_z",
+    schematic = "models/nosnow_spruce_tree.mts",
     rotation = "random",
 })
 
@@ -500,7 +564,8 @@ minetest.register_decoration({
     biomes = "snowy_taiga",
 	y_min = 3,
     y_max = 1000,
-    schematic = "./models/spruce_tree.mts",
+	flags = "place_center_x, place_center_z",
+    schematic = "models/spruce_tree.mts",
     rotation = "random",
 })
 
@@ -523,7 +588,7 @@ minetest.register_biome({
 
 minetest.register_biome({
     name = "forest",
-    node_top = "default:dirt_with_grass",
+    node_top = "default:dirt_with_forest_grass",
     depth_top = 1,
     node_filler = "default:dirt",
     depth_filler = 3,
@@ -531,6 +596,18 @@ minetest.register_biome({
     y_min = 2,
     heat_point = 45,
     humidity_point = 70,
+})
+
+minetest.register_biome({
+    name = "birch_forest",
+    node_top = "default:dirt_with_birch_forest_grass",
+    depth_top = 1,
+    node_filler = "default:dirt",
+    depth_filler = 3,
+	y_max = 31000,
+    y_min = 2,
+    heat_point = 40,
+    humidity_point = 65,
 })
 
 minetest.register_biome({
@@ -546,14 +623,48 @@ minetest.register_biome({
 })
 
 minetest.register_biome({
+    name = "savanna",
+    node_top = "default:dirt_with_savanna_grass",
+    depth_top = 1,
+    node_filler = "default:dirt",
+    depth_filler = 3,
+	y_max = 51,
+    y_min = 2,
+    heat_point = 70,
+    humidity_point = 60,
+})
+
+minetest.register_biome({
+    name = "jungle",
+    node_top = "default:dirt_with_jungle_grass",
+    depth_top = 1,
+    node_filler = "default:dirt",
+    depth_filler = 3,
+	y_max = 51,
+    y_min = 2,
+    heat_point = 70,
+    humidity_point = 80,
+})
+
+minetest.register_biome({
+    name = "taiga",
+    node_top = "default:dirt_with_taiga_grass",
+    depth_top = 1,
+    node_filler = "default:dirt",
+    depth_filler = 3,
+	y_max = 31000,
+    y_min = 2,
+    heat_point = 25,
+    humidity_point = 60,
+})
+
+minetest.register_biome({
     name = "snowy_taiga",
+	node_dust = "default:snow",
     node_top = "default:dirt_with_snow",
     depth_top = 1,
     node_filler = "default:dirt",
     depth_filler = 3,
-	node_water_top = "default:ice",
-    depth_water_top = 1,
-    node_water = "default:water_source",
 	y_max = 31000,
     y_min = 2,
     heat_point = 10,
