@@ -1,3 +1,10 @@
 -retexturizing
 -fix intweak hand sound
 -inventory background
+-beds, doors, wheat transparency
+-taking an object out of a frame with hand
+-mobs spawn
+-structures generation
+-boats texture
+-axes crafts
+-torches no drop

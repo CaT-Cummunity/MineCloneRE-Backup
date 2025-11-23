@@ -495,7 +495,7 @@ minetest.register_decoration({
 	y_min = 3,
     y_max = 1000,
 	flags = "place_center_x, place_center_z",
-    schematic = "models/tree.mts",
+    schematic = "schematics/tree.mts",
     rotation = "random",
 })
 
@@ -509,7 +509,7 @@ minetest.register_decoration({
 	y_min = 3,
     y_max = 1000,
 	flags = "place_center_x, place_center_z",
-    schematic = "models/birch_tree.mts",
+    schematic = "schematics/birch_tree.mts",
     rotation = "random",
 })
 
@@ -523,7 +523,7 @@ minetest.register_decoration({
 	y_min = 3,
     y_max = 1000,
 	flags = "place_center_x, place_center_z",
-    schematic = "models/acacia_tree.mts",
+    schematic = "schematics/acacia_tree.mts",
     rotation = "random",
 })
 
@@ -537,7 +537,7 @@ minetest.register_decoration({
 	y_min = 3,
     y_max = 1000,
 	flags = "place_center_x, place_center_z",
-    schematic = "models/jungle_tree.mts",
+    schematic = "schematics/jungle_tree.mts",
     rotation = "random",
 })
 
@@ -551,7 +551,7 @@ minetest.register_decoration({
 	y_min = 3,
     y_max = 1000,
 	flags = "place_center_x, place_center_z",
-    schematic = "models/nosnow_spruce_tree.mts",
+    schematic = "schematics/nosnow_spruce_tree.mts",
     rotation = "random",
 })
 
@@ -565,7 +565,7 @@ minetest.register_decoration({
 	y_min = 3,
     y_max = 1000,
 	flags = "place_center_x, place_center_z",
-    schematic = "models/spruce_tree.mts",
+    schematic = "schematics/spruce_tree.mts",
     rotation = "random",
 })
 
