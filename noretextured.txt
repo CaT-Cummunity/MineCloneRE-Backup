@@ -3,11 +3,9 @@
 **furnace bg
 **large chest bg
 **sign
-**torch
 **player
 **treeprop
 **wieldhand
-*doors
 *farming
 **tige
 *flowers
