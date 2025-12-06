@@ -1,4 +1,3 @@
-*beds
 *boat
 *default
 **furnace bg
