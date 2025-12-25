@@ -4,7 +4,6 @@
 **large chest bg
 **player
 **treeprop
-**wieldhand
 *farming
 **tige
 *flowers
@@ -15,13 +14,12 @@
 *inventory
 **backgrounds
 *mobs
-*player_textures
 *redstone
 **mesecons textures
 ***torch
 *throwing
 **arrow 2 back front
-**torches
-**wallet
+*torches
+*wallet
 
 
