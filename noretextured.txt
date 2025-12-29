@@ -7,7 +7,6 @@
 *farming
 **tige
 *flowers
-**pot
 **watherlily angles
 *gamelde
 *hud
