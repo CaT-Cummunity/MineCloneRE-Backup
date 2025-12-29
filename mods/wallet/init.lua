@@ -156,7 +156,7 @@ local function register_wall(nodename, name, texture, invtex)
 		description = name,
 		paramtype = "light",
 		tiles = {texture},
-		inventory_image = invtex,
+		--inventory_image = invtex,
 		stack_max = 64,
 		drawtype = "nodebox",
 		node_box = {
