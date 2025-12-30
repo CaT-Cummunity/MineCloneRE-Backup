@@ -2,7 +2,6 @@
 *default
 **furnace bg
 **large chest bg
-**player
 **treeprop
 *farming
 **tige
@@ -19,5 +18,4 @@
 *throwing
 **arrow 2 back front
 *torches
-
-
+*xpanes
