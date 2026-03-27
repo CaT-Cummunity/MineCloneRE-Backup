@@ -17,7 +17,7 @@ HUD_HUNGER_TICK = 300			--sets time for loosing 1/2 bread (of 10) (in seconds)
 -- health bar
 --
 HUD_HEALTH_POS = {x=0,y=0}			--min 0, max 1
-HUD_HEALTH_OFFSET = {x=5,y=30}		--offset in pixel
+HUD_HEALTH_OFFSET = {x=10,y=60}		--offset in pixel
 
 --
 -- hunger bar
