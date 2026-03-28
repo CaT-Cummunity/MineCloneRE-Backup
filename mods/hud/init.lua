@@ -15,14 +15,14 @@ HUD_SHOW_ARMOR = false
 if minetest.get_modpath("3d_armor") ~= nil then HUD_SHOW_ARMOR = true end
 if HUD_ENABLE_HUNGER == nil then HUD_ENABLE_HUNGER = minetest.setting_getbool("enable_damage") end
 HUD_HUNGER_TICK = 300
-HUD_HEALTH_POS = {x=0.5,y=0.89}
-HUD_HEALTH_OFFSET = {x=-175, y=2}
-HUD_HUNGER_POS = {x=0.5,y=0.89}
-HUD_HUNGER_OFFSET = {x=15, y=2}
-HUD_AIR_POS = {x=0.5,y=0.88}
-HUD_AIR_OFFSET = {x=15,y=-15}
-HUD_ARMOR_POS = {x=0.5,y=.88}
-HUD_ARMOR_OFFSET = {x=-175, y=-15}
+HUD_HEALTH_POS = {x=0.4,y=0.935}
+HUD_HEALTH_OFFSET = {x=0, y=0}
+HUD_HUNGER_POS = {x=0.528,y=0.935}
+HUD_HUNGER_OFFSET = {x=0, y=0}
+HUD_AIR_POS = {x=0.528,y=0.915}
+HUD_AIR_OFFSET = {x=0,y=-0}
+HUD_ARMOR_POS = {x=0.4,y=0.915}
+HUD_ARMOR_OFFSET = {x=0, y=0}
 
 --load costum settings
 local set = io.open(minetest.get_modpath("hud").."/hud.conf", "r")
