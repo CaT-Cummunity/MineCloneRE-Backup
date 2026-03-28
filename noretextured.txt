@@ -1,8 +1,4 @@
 *boat
-*default
-**furnace bg
-**large chest bg
-**treeprop
 *farming
 **tige
 *flowers
