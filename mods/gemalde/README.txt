@@ -1,1 +1,1 @@
-This mod is an edited version of gemalde. The textures are from minecraft. This mod was edited by jojoa1997.
+This mod is an edited version of gemalde. The textures are now from mineclonia. This mod was edited by jojoa1997 and reedited by YCaTGameRT.

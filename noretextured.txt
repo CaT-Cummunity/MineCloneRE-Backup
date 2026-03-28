@@ -3,8 +3,6 @@
 **tige
 *flowers
 **watherlily angles
-*gamelde
-**backgrounds
 *mobs
 *redstone
 **mesecons textures
