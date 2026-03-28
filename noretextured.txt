@@ -10,6 +10,6 @@
 **mesecons textures
 ***torch
 *throwing
-**arrow 2 back front
+**arrow, 2, back, front
 *torches
 *xpanes
