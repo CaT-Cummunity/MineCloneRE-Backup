@@ -172,16 +172,16 @@ playerdata = load_player_data()
 	if creative_type == "search" and playerdata[player:get_player_name()]['gamemode'] == "Creative" then
 		local pagenum = math.floor(pagenum)
 		local pagemax = math.floor((inventory.inventory_size-1) / (9*3) + 1)
-		CREATIVE_SEARCH_ITEMS = "invsize[9,9.5;]"..
+		CREATIVE_SEARCH_ITEMS = "invsize[9,8.5;]"..
 		--"background[-0.22,-0.25;10.8,7.7;creative_inventory_bg.png]"..
 			--"button[8,0;1.5,1;creative_search;Search]"..
-			"list[current_player;main;0,8.75;9,1;]"..
+			"list[current_player;main;0,7.75;9,1;]"..
 			"image[0,0;1,1;3d_armor_inv_helmet_clear.png]"..
 			"image[0,1;1,1;3d_armor_inv_chestplate_clear.png]"..
 			"image[0,2;1,1;3d_armor_inv_leggings_clear.png]"..
 			"image[0,3;1,1;3d_armor_inv_boots_clear.png]"..
 			"image[1.1,0.2;2,4;player.png]"..
-			"list[detached:creative;main;0,4;9,4;"..tostring(start_i).."]"..
+			"list[detached:creative;main;0,4;9,3;"..tostring(start_i).."]"..
 			"label[6,2.75;"..tostring(pagenum).."/"..tostring(pagemax).."]"..
 			"button[4.5,2.35;1.5,1.5;creative_prev;<<]"..
 			"button[6.5,2.35;1.5,1.5;creative_next;>>]"..
