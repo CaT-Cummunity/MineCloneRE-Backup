@@ -172,15 +172,15 @@ playerdata = load_player_data()
 	if creative_type == "search" and playerdata[player:get_player_name()]['gamemode'] == "Creative" then
 		local pagenum = math.floor(pagenum)
 		local pagemax = math.floor((inventory.inventory_size-1) / (9*3) + 1)
-		CREATIVE_SEARCH_ITEMS = "invsize[10,7;]"..
-		"background[-0.22,-0.25;10.8,7.7;creative_inventory_bg.png]"..
-			"button[8,0;1.5,1;creative_search;Search]"..
+		CREATIVE_SEARCH_ITEMS = "invsize[11,9.75;]"..
+		--"background[-0.22,-0.25;10.8,7.7;creative_inventory_bg.png]"..
+			--"button[8,0;1.5,1;creative_search;Search]"..
 			"list[current_player;main;0.21,6.05;9,1;]"..
 			"list[detached:creative;main;0.21,2.78;9,3;"..tostring(start_i).."]"..
 			"label[7.25,1.7;"..tostring(pagenum).."/"..tostring(pagemax).."]"..
 			"button[5.5,1.5;1.5,1;creative_prev;<<]"..
 			"button[8,1.5;1.5,1;creative_next;>>]"..
-			"button[5.5,0;1.5,1;creative_survival;Survival]"..
+			"button[9.5,0;1.5,1.5;creative_survival;Inventory]"..
 			"list[detached:creative_trash;main;9.28,6.05;1,1;]"
 		player:set_inventory_formspec(CREATIVE_SEARCH_ITEMS)
 		inventory.hotbar(player)
