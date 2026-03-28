@@ -8,8 +8,6 @@
 *flowers
 **watherlily angles
 *gamelde
-*hud
-*inventory
 **backgrounds
 *mobs
 *redstone
