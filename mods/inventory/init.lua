@@ -176,10 +176,11 @@ playerdata = load_player_data()
 		--"background[-0.22,-0.25;10.8,7.7;creative_inventory_bg.png]"..
 			--"button[8,0;1.5,1;creative_search;Search]"..
 			"list[current_player;main;0,8.75;9,1;]"..
+			"image[1.6,0.2;2,4;player.png]"..
 			"list[detached:creative;main;0,4;9,4;"..tostring(start_i).."]"..
-			"label[7.25,1.7;"..tostring(pagenum).."/"..tostring(pagemax).."]"..
-			"button[5.5,1.5;1.5,1;creative_prev;<<]"..
-			"button[8,1.5;1.5,1;creative_next;>>]"..
+			"label[6,2.75;"..tostring(pagenum).."/"..tostring(pagemax).."]"..
+			"button[4.5,2.35;1.5,1.5;creative_prev;<<]"..
+			"button[6.5,2.35;1.5,1.5;creative_next;>>]"..
 			"button[7.5,0;1.5,1.5;creative_survival;Inventory]"..
 			"list[detached:creative_trash;main;8,2.55;1,1;]"
 		player:set_inventory_formspec(CREATIVE_SEARCH_ITEMS)

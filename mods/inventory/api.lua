@@ -12,7 +12,7 @@ CREATIVE_FORMSPEC = "invsize[9,9.5;]"..
 	"list[detached:"..name.."_armor;armor_legs;0,2;1,1;]"..
 	"list[detached:"..name.."_armor;armor_feet;0,3;1,1;]"..
 	"image[1.6,0.2;2,4;player.png]"..
-	"list[current_player;main;0,4;9,4;]"..
+	"list[current_player;main;0,4;9,4;9]"..
 	"list[current_player;main;0,8.75;9,1;]"..
 	"list[detached:creative_trash;main;8,2.55;1,1;]"..
 	"button[6.5,2.35;1.5,1.5;clear_inventory;Clear]"
@@ -28,11 +28,12 @@ local name = player:get_player_name()
 		"list[detached:"..name.."_armor;armor_torso;0,1;1,1;]"..
 		"list[detached:"..name.."_armor;armor_legs;0,2;1,1;]"..
 		"list[detached:"..name.."_armor;armor_feet;0,3;1,1;]"..
-		"image[1.6,0.25;2,4;player.png]"..
-		"list[current_player;main;0,4.5;9,4;9]"..
-		"list[current_player;main;0,8.25;9,1;]"..
+		"image[1.6,0.2;2,4;player.png]"..
+		"list[current_player;main;0,4;9,4;9]"..
+		"list[current_player;main;0,8.75;9,1;]"..
+		"image[6,1.5;1,1;crafting_formspec_arrow.png]"..
 		"list[current_player;craft;4,1;2,1;]"..
-		"list[current_player;craft;4,2;2,1;3]"..
+		"list[current_player;craft;4,2.05;2,1;3]"..
 		"list[current_player;craftpreview;7,1.5;1,1;]"
 	player:set_inventory_formspec(SURVIVAL_FORMSPEC)
 end
