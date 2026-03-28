@@ -8,3 +8,4 @@
 -boats texture
 -axes crafts
 -torches no drop
+-hud size
