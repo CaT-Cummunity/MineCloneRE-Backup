@@ -3,7 +3,7 @@
 -------------------
 minetest.register_craftitem("mobs:sheep", {
 	description = "Sheep",
-	inventory_image = "spawn_sheep.png",
+	inventory_image = "spawn_egg.png^[colorize:#E7E7E7:210^(spawn_egg_overlay.png^[colorize:#FFB5B5:200)",
 	wield_scale = {x = 1.25, y = 1.25, z = 2.5},
 	groups = {},
 	
@@ -18,8 +18,8 @@ minetest.register_craftitem("mobs:sheep", {
 })
 
 minetest.register_craftitem("mobs:slime", {
-	description = "slime",
-	inventory_image = "spawn_slime.png",
+	description = "Slime",
+	inventory_image = "spawn_egg.png^[colorize:#52A03E:210^(spawn_egg_overlay.png^[colorize:#7EBF6D:200)",
 	wield_scale = {x = 1.25, y = 1.25, z = 2.5},
 	groups = {},
 	
@@ -35,7 +35,7 @@ minetest.register_craftitem("mobs:slime", {
 
 minetest.register_craftitem("mobs:zombie", {
 	description = "Zombie",
-	inventory_image = "spawn_zombie.png",
+	inventory_image = "spawn_egg.png^[colorize:#00AFAF:210^(spawn_egg_overlay.png^[colorize:#799C66:200)",
 	wield_scale = {x = 1.25, y = 1.25, z = 2.5},
 	groups = {},
 	
@@ -52,7 +52,7 @@ minetest.register_craftitem("mobs:zombie", {
 
 minetest.register_craftitem("mobs:spider", {
 	description = "Spider",
-	inventory_image = "spawn_spider.png",
+	inventory_image = "spawn_egg.png^[colorize:#342D26:210^(spawn_egg_overlay.png^[colorize:#A80E0E:200)",
 	wield_scale = {x = 1.25, y = 1.25, z = 2.5},
 	groups = {},
 	
@@ -69,7 +69,7 @@ minetest.register_craftitem("mobs:spider", {
 
 minetest.register_craftitem("mobs:creeper", {
 	description = "Creeper",
-	inventory_image = "spawn_creeper.png",
+	inventory_image = "spawn_egg.png^[colorize:#0DA70A:210^(spawn_egg_overlay.png^[colorize:#000000:200)",
 	wield_scale = {x = 1.25, y = 1.25, z = 2.5},
 	groups = {},
 	
