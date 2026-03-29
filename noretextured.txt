@@ -6,7 +6,7 @@
 *mobs
 *redstone
 **mesecons textures
-***torch
+***lever
 *throwing
 **arrow, 2, back, front
 *torches
