@@ -1,4 +1,3 @@
-*boat
 *farming
 **tige
 *flowers
