@@ -51,7 +51,7 @@ See README.txt in each mod directory for information about other authors.
 http://www.minecraftforum.net/topic/72747-/
 
 License of menu/header.png
-Copyright (C) 2025 YCaTGameRT WTFPL
+Copyright (C) 2025 YCaTGameRT CC BY-SA 4
 
 
 Where contact Dave Devils ?

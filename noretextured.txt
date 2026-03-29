@@ -1,32 +1,12 @@
-*beds
 *boat
-*default
-**furnace bg
-**large chest bg
-**sign
-**torch
-**player
-**treeprop
-**wieldhand
-*doors
 *farming
 **tige
 *flowers
-**pot
 **watherlily angles
-*gamelde
-*hud
-*inventory
-**backgrounds
 *mobs
-*player_textures
 *redstone
 **mesecons textures
-***torch
-*signs
+***lever
 *throwing
-**arrow 2 back front
-**torches
-**wallet
-
-
+**arrow, 2, back, front
+*torches
