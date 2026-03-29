@@ -21,7 +21,7 @@ minetest.register_node("farming:pumpkin_1", {
 	drawtype = "plantlike",
 	sunlight_propagates = true,
 	drop = "",
-	tiles = {"farming_tige_1.png"},
+	tiles = {"farming_tige_1.png^[colorize:#6BA100:127"},
 	selection_box = {
 		type = "fixed",
 		fixed = {
@@ -38,7 +38,7 @@ minetest.register_node("farming:pumpkin_2", {
 	drawtype = "plantlike",
 	sunlight_propagates = true,
 	drop = "",
-	tiles = {"farming_tige_2.png"},
+	tiles = {"farming_tige_2.png^[colorize:#6BA100:127"},
 	selection_box = {
 		type = "fixed",
 		fixed = {
@@ -85,7 +85,7 @@ minetest.register_node("farming:pumpkintige_unconnect", {
 	sunlight_propagates = true,
 	drop = "",
 	drawtype = "plantlike",
-	tiles = {"farming_tige_end.png"},
+	tiles = {"farming_tige_end.png^[colorize:#FFA800:127"},
 	groups = {snappy=3, flammable=2, not_in_creative_inventory=1 ,dig_by_water=1},
 	sounds = default.node_sound_leaves_defaults(),
 })
@@ -111,12 +111,12 @@ minetest.register_node("farming:pumpkintige_linked_r", {
 		fixed = {-0.2, -0.5, -0.2, 0.2, 0.2, 0.2}
 	},
 	tiles = {
-		"farming_tige_connnect.png", --top
-		"farming_tige_connnect.png", -- bottom
-		"farming_tige_connnect.png", -- right
-		"farming_tige_connnect.png", -- left
-		"farming_tige_connnect.png", -- back
-		"farming_tige_connnect.png^[transformFX90" --front
+		"farming_tige_connnect.png^[colorize:#FFA800:127", --top
+		"farming_tige_connnect.png^[colorize:#FFA800:127", -- bottom
+		"farming_tige_connnect.png^[colorize:#FFA800:127", -- right
+		"farming_tige_connnect.png^[colorize:#FFA800:127", -- left
+		"farming_tige_connnect.png^[colorize:#FFA800:127", -- back
+		"farming_tige_connnect.png^[colorize:#FFA800:127^[transformFX90" --front
 	},
 	groups = {snappy=3, flammable=2, not_in_creative_inventory=1 ,dig_by_water=1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -142,12 +142,12 @@ minetest.register_node("farming:pumpkintige_linked_l", {
 		fixed = {-0.2, -0.5, -0.2, 0.2, 0.2, 0.2}
 	},
 	tiles = {
-		"farming_tige_connnect.png", --top
-		"farming_tige_connnect.png", -- bottom
-		"farming_tige_connnect.png", -- right
-		"farming_tige_connnect.png", -- left
-		"farming_tige_connnect.png^[transformFX90", -- back
-		"farming_tige_connnect.png" --front
+		"farming_tige_connnect.png^[colorize:#FFA800:127", --top
+		"farming_tige_connnect.png^[colorize:#FFA800:127", -- bottom
+		"farming_tige_connnect.png^[colorize:#FFA800:127", -- right
+		"farming_tige_connnect.png^[colorize:#FFA800:127", -- left
+		"farming_tige_connnect.png^[colorize:#FFA800:127^[transformFX90", -- back
+		"farming_tige_connnect.png^[colorize:#FFA800:127" --front
 	},
 	groups = {snappy=3, flammable=2, not_in_creative_inventory=1 ,dig_by_water=1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -173,12 +173,12 @@ minetest.register_node("farming:pumpkintige_linked_t", {
 		fixed = {-0.2, -0.5, -0.2, 0.2, 0.2, 0.2}
 	},
 	tiles = {
-		"farming_tige_connnect.png", --top
-		"farming_tige_connnect.png", -- bottom
-		"farming_tige_connnect.png^[transformFX90", -- right
-		"farming_tige_connnect.png", -- left
-		"farming_tige_connnect.png", -- back
-		"farming_tige_connnect.png" --front
+		"farming_tige_connnect.png^[colorize:#FFA800:127", --top
+		"farming_tige_connnect.png^[colorize:#FFA800:127", -- bottom
+		"farming_tige_connnect.png^[colorize:#FFA800:127^[transformFX90", -- right
+		"farming_tige_connnect.png^[colorize:#FFA800:127", -- left
+		"farming_tige_connnect.png^[colorize:#FFA800:127", -- back
+		"farming_tige_connnect.png^[colorize:#FFA800:127" --front
 	},
 	groups = {snappy=3, flammable=2, not_in_creative_inventory=1 ,dig_by_water=1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -204,12 +204,12 @@ minetest.register_node("farming:pumpkintige_linked_b", {
 		fixed = {-0.2, -0.5, -0.2, 0.2, 0.2, 0.2}
 	},
 	tiles = {
-		"farming_tige_connnect.png", --top
-		"farming_tige_connnect.png", -- bottom
-		"farming_tige_connnect.png", -- right
-		"farming_tige_connnect.png^[transformFX90", -- left
-		"farming_tige_connnect.png", -- back
-		"farming_tige_connnect.png" --front
+		"farming_tige_connnect.png^[colorize:#FFA800:127", --top
+		"farming_tige_connnect.png^[colorize:#FFA800:127", -- bottom
+		"farming_tige_connnect.png^[colorize:#FFA800:127", -- right
+		"farming_tige_connnect.png^[colorize:#FFA800:127^[transformFX90", -- left
+		"farming_tige_connnect.png^[colorize:#FFA800:127", -- back
+		"farming_tige_connnect.png^[colorize:#FFA800:127" --front
 	},
 	groups = {snappy=3, flammable=2, not_in_creative_inventory=1 ,dig_by_water=1},
 	sounds = default.node_sound_leaves_defaults(),
