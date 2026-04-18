@@ -25,8 +25,29 @@ that occur in the new version of the Luanti engine
 License of source code
 ----------------------
 
+MineCloneRE source license:
+
+    MineCloneRE - Minecraft-like game - fixed fork of original MineClone
+    Copyright (C) 2026  YCaTGameRT
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 2.1 of the License, or (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this library; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+See Licence.txt
+
 Mineclone source :
 LGPL v2.1 (Dave Devil's) see licence.txt
+
 
 Mods Credit :
 See README.txt in each mod directory for information about other authors.
@@ -41,19 +62,15 @@ Bob Lennon because it's a pyro-barbare
 License of media (textures and sounds)
 --------------------------------------
 
-Textures for MineCloneRE getted from Mineclonia!
+Textures for MineCloneRE getted from Mineclonia and licensed under Creative Commons Attribution-ShareAlike 4.0 Unported (CC BY-SA 4.0)
+Mineclonia use Pixel ImPerfection textures based on Pixel Perfection!
 All other files, unless mentioned otherwise, fall under:
-Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
-http://creativecommons.org/licenses/by-sa/3.0/
+Creative Commons Attribution-ShareAlike 4.0 Unported (CC BY-SA 4.0)
+See Media_License.txt
 
 See README.txt in each mod directory for information about other authors.
 
 http://www.minecraftforum.net/topic/72747-/
 
-License of menu/header.png
-Copyright (C) 2025 YCaTGameRT CC BY-SA 4
-
-
-Where contact Dave Devils ?
-----------------------------
-You can contact at twitter https://twitter.com/dev_dave33
+License of ./menu/
+Copyright (C) 2025 YCaTGameRT CC BY-SA 4.0
