@@ -63,7 +63,7 @@ License of media (textures and sounds)
 --------------------------------------
 
 Textures for MineCloneRE getted from Mineclonia and licensed under Creative Commons Attribution-ShareAlike 4.0 Unported (CC BY-SA 4.0)
-Mineclonia use Pixel ImPerfection textures based on Pixel Perfection!
+Mineclonia use Pixel ImPerfection textures based on Pixel Perfection by XSSheep
 All other files, unless mentioned otherwise, fall under:
 Creative Commons Attribution-ShareAlike 4.0 Unported (CC BY-SA 4.0)
 See Media_License.txt
