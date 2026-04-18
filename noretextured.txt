@@ -1,3 +1,2 @@
-*mobs
 *throwing
 **arrow, 2, back, front
