@@ -6,7 +6,7 @@
 = | |  | | | | | |  __/ |____| | (_) | | | |  __/ |\ \| |___  =
 = |_|  |_|_|_| |_|\___|\_____|_|\___/|_| |_|\___|_| \_\_____| =
 =                                                             =
-=                                                             =		     
+=                                                             =
 =    Minecraft-like game - fixed fork of original MineClone   =
 ===============================================================
 
@@ -43,6 +43,7 @@ MineCloneRE source license:
     You should have received a copy of the GNU Lesser General Public
     License along with this library; if not, write to the Free Software
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+
 See Licence.txt
 
 Mineclone source :
