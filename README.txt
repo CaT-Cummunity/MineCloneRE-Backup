@@ -75,3 +75,6 @@ http://www.minecraftforum.net/topic/72747-/
 
 License of ./menu/
 Copyright (C) 2025 YCaTGameRT CC BY-SA 4.0
+
+License of ./screenshots/
+Copyright (C) 2025 YCaTGameRT CC BY-SA 4.0
