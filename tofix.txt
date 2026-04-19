@@ -4,7 +4,6 @@
 -taking an object out of a frame with hand
 -mobs spawn
 -structures generation
--boats texture
 -axes crafts
 -torches no drop
 -hud items interval

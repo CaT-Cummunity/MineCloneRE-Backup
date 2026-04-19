@@ -19,10 +19,13 @@ end
 --
 local boat = {
 	physical = true,
-	collisionbox = {-1,-0.5,-1, 1,0.5,1},
+	-- fixed model and texture geted from Mineclonia
+	pointable = true,
+	collisionbox = {-0.5, -0.00, -0.5, 0.5, 0.55, 0.5},
+	selectionbox = {-0.7, -0.15, -0.7, 0.7, 0.55, 0.7},
 	visual = "mesh",
-	mesh = "boat_base.x",
-	textures = {"boat_texture.png"},
+	mesh = "boat_base.b3d",
+	textures = {"boat_texture.png", "blank.png"},
 	driver = nil,
 	v = 0,
 	stepcount = 0,
